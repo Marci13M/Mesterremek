@@ -45,11 +45,10 @@
             this.PB_CareCompass_Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.PB_CareCompass_Logo.Dock = System.Windows.Forms.DockStyle.Top;
             this.PB_CareCompass_Logo.Image = global::CareCompass.Properties.Resources.logó___fehér;
-            this.PB_CareCompass_Logo.Location = new System.Drawing.Point(0, 37);
-            this.PB_CareCompass_Logo.Margin = new System.Windows.Forms.Padding(4);
-            this.PB_CareCompass_Logo.MinimumSize = new System.Drawing.Size(141, 49);
+            this.PB_CareCompass_Logo.Location = new System.Drawing.Point(0, 30);
+            this.PB_CareCompass_Logo.MinimumSize = new System.Drawing.Size(106, 40);
             this.PB_CareCompass_Logo.Name = "PB_CareCompass_Logo";
-            this.PB_CareCompass_Logo.Size = new System.Drawing.Size(645, 148);
+            this.PB_CareCompass_Logo.Size = new System.Drawing.Size(484, 120);
             this.PB_CareCompass_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PB_CareCompass_Logo.TabIndex = 0;
             this.PB_CareCompass_Logo.TabStop = false;
@@ -59,22 +58,20 @@
             this.Lb_Felhasznalonev.AutoSize = true;
             this.Lb_Felhasznalonev.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Lb_Felhasznalonev.ForeColor = System.Drawing.Color.White;
-            this.Lb_Felhasznalonev.Location = new System.Drawing.Point(161, 292);
-            this.Lb_Felhasznalonev.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lb_Felhasznalonev.Location = new System.Drawing.Point(121, 237);
             this.Lb_Felhasznalonev.Name = "Lb_Felhasznalonev";
-            this.Lb_Felhasznalonev.Size = new System.Drawing.Size(138, 24);
+            this.Lb_Felhasznalonev.Size = new System.Drawing.Size(46, 19);
             this.Lb_Felhasznalonev.TabIndex = 2;
-            this.Lb_Felhasznalonev.Text = "Felhasználónév";
+            this.Lb_Felhasznalonev.Text = "Email";
             // 
             // Lb_jelszo
             // 
             this.Lb_jelszo.AutoSize = true;
             this.Lb_jelszo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Lb_jelszo.ForeColor = System.Drawing.Color.White;
-            this.Lb_jelszo.Location = new System.Drawing.Point(161, 427);
-            this.Lb_jelszo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lb_jelszo.Location = new System.Drawing.Point(121, 347);
             this.Lb_jelszo.Name = "Lb_jelszo";
-            this.Lb_jelszo.Size = new System.Drawing.Size(59, 24);
+            this.Lb_jelszo.Size = new System.Drawing.Size(47, 19);
             this.Lb_jelszo.TabIndex = 4;
             this.Lb_jelszo.Text = "Jelszó";
             // 
@@ -82,9 +79,8 @@
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(645, 37);
+            this.panel1.Size = new System.Drawing.Size(484, 30);
             this.panel1.TabIndex = 6;
             // 
             // Btn_Bejelentkezes
@@ -98,10 +94,9 @@
             this.Btn_Bejelentkezes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Bejelentkezes.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Btn_Bejelentkezes.ForeColor = System.Drawing.Color.White;
-            this.Btn_Bejelentkezes.Location = new System.Drawing.Point(212, 569);
-            this.Btn_Bejelentkezes.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_Bejelentkezes.Location = new System.Drawing.Point(159, 462);
             this.Btn_Bejelentkezes.Name = "Btn_Bejelentkezes";
-            this.Btn_Bejelentkezes.Size = new System.Drawing.Size(240, 49);
+            this.Btn_Bejelentkezes.Size = new System.Drawing.Size(180, 40);
             this.Btn_Bejelentkezes.TabIndex = 5;
             this.Btn_Bejelentkezes.Text = "Bejelentkezés";
             this.Btn_Bejelentkezes.TextColor = System.Drawing.Color.White;
@@ -118,15 +113,15 @@
             this.Tb_Jelszo.BorderRadius = 10;
             this.Tb_Jelszo.BorderSize = 2;
             this.Tb_Jelszo.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Tb_Jelszo.Location = new System.Drawing.Point(167, 455);
-            this.Tb_Jelszo.Margin = new System.Windows.Forms.Padding(5);
+            this.Tb_Jelszo.Location = new System.Drawing.Point(125, 370);
+            this.Tb_Jelszo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Tb_Jelszo.Multiline = false;
             this.Tb_Jelszo.Name = "Tb_Jelszo";
-            this.Tb_Jelszo.Padding = new System.Windows.Forms.Padding(9);
+            this.Tb_Jelszo.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.Tb_Jelszo.PasswordChar = true;
             this.Tb_Jelszo.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.Tb_Jelszo.PlaceholderText = "";
-            this.Tb_Jelszo.Size = new System.Drawing.Size(333, 40);
+            this.Tb_Jelszo.Size = new System.Drawing.Size(250, 30);
             this.Tb_Jelszo.TabIndex = 3;
             this.Tb_Jelszo.Texts = "";
             this.Tb_Jelszo.UnderlinedStyle = false;
@@ -139,15 +134,15 @@
             this.Tb_Felhasznalonev.BorderRadius = 10;
             this.Tb_Felhasznalonev.BorderSize = 2;
             this.Tb_Felhasznalonev.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Tb_Felhasznalonev.Location = new System.Drawing.Point(167, 320);
-            this.Tb_Felhasznalonev.Margin = new System.Windows.Forms.Padding(5);
+            this.Tb_Felhasznalonev.Location = new System.Drawing.Point(125, 260);
+            this.Tb_Felhasznalonev.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Tb_Felhasznalonev.Multiline = false;
             this.Tb_Felhasznalonev.Name = "Tb_Felhasznalonev";
-            this.Tb_Felhasznalonev.Padding = new System.Windows.Forms.Padding(9);
+            this.Tb_Felhasznalonev.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.Tb_Felhasznalonev.PasswordChar = false;
             this.Tb_Felhasznalonev.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.Tb_Felhasznalonev.PlaceholderText = "";
-            this.Tb_Felhasznalonev.Size = new System.Drawing.Size(333, 40);
+            this.Tb_Felhasznalonev.Size = new System.Drawing.Size(250, 30);
             this.Tb_Felhasznalonev.TabIndex = 1;
             this.Tb_Felhasznalonev.Texts = "";
             this.Tb_Felhasznalonev.UnderlinedStyle = false;
@@ -157,19 +152,20 @@
             this.Lb_ElfelejtettJelszo.AutoSize = true;
             this.Lb_ElfelejtettJelszo.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Lb_ElfelejtettJelszo.ForeColor = System.Drawing.Color.White;
-            this.Lb_ElfelejtettJelszo.Location = new System.Drawing.Point(255, 643);
+            this.Lb_ElfelejtettJelszo.Location = new System.Drawing.Point(191, 522);
+            this.Lb_ElfelejtettJelszo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lb_ElfelejtettJelszo.Name = "Lb_ElfelejtettJelszo";
-            this.Lb_ElfelejtettJelszo.Size = new System.Drawing.Size(143, 24);
+            this.Lb_ElfelejtettJelszo.Size = new System.Drawing.Size(116, 19);
             this.Lb_ElfelejtettJelszo.TabIndex = 7;
             this.Lb_ElfelejtettJelszo.Text = "Elfelejtett jelszó";
             this.Lb_ElfelejtettJelszo.Click += new System.EventHandler(this.Lb_ElfelejtettJelszo_Click);
             // 
             // Bejelentkezés
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(57)))), ((int)(((byte)(92)))));
-            this.ClientSize = new System.Drawing.Size(645, 715);
+            this.ClientSize = new System.Drawing.Size(484, 581);
             this.Controls.Add(this.Lb_ElfelejtettJelszo);
             this.Controls.Add(this.Btn_Bejelentkezes);
             this.Controls.Add(this.Tb_Jelszo);
@@ -180,7 +176,6 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Bejelentkezés";

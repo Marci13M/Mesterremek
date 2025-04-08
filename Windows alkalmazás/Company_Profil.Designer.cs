@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Pn_CegProfil = new System.Windows.Forms.Panel();
             this.PB_KorhazProfil = new System.Windows.Forms.PictureBox();
             this.Btn_ModositasMentes = new CareCompass.Customs.CCButton();
@@ -101,7 +101,7 @@
             // 
             // PB_KorhazProfil
             // 
-            this.PB_KorhazProfil.Location = new System.Drawing.Point(12, 12);
+            this.PB_KorhazProfil.Location = new System.Drawing.Point(23, 12);
             this.PB_KorhazProfil.Name = "PB_KorhazProfil";
             this.PB_KorhazProfil.Size = new System.Drawing.Size(90, 90);
             this.PB_KorhazProfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -120,7 +120,7 @@
             this.Btn_ModositasMentes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_ModositasMentes.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Btn_ModositasMentes.ForeColor = System.Drawing.Color.Black;
-            this.Btn_ModositasMentes.Location = new System.Drawing.Point(687, 38);
+            this.Btn_ModositasMentes.Location = new System.Drawing.Point(667, 62);
             this.Btn_ModositasMentes.Name = "Btn_ModositasMentes";
             this.Btn_ModositasMentes.Size = new System.Drawing.Size(150, 40);
             this.Btn_ModositasMentes.TabIndex = 7;
@@ -140,7 +140,7 @@
             this.Btn_KorhazKepModositasa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_KorhazKepModositasa.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Btn_KorhazKepModositasa.ForeColor = System.Drawing.Color.Black;
-            this.Btn_KorhazKepModositasa.Location = new System.Drawing.Point(118, 72);
+            this.Btn_KorhazKepModositasa.Location = new System.Drawing.Point(119, 72);
             this.Btn_KorhazKepModositasa.Name = "Btn_KorhazKepModositasa";
             this.Btn_KorhazKepModositasa.Size = new System.Drawing.Size(107, 30);
             this.Btn_KorhazKepModositasa.TabIndex = 6;
@@ -154,7 +154,7 @@
             this.Lb_CegNev.AutoSize = true;
             this.Lb_CegNev.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Lb_CegNev.ForeColor = System.Drawing.Color.White;
-            this.Lb_CegNev.Location = new System.Drawing.Point(113, 11);
+            this.Lb_CegNev.Location = new System.Drawing.Point(119, 12);
             this.Lb_CegNev.Name = "Lb_CegNev";
             this.Lb_CegNev.Size = new System.Drawing.Size(103, 33);
             this.Lb_CegNev.TabIndex = 4;
@@ -265,39 +265,39 @@
             this.dGV_Telefonszam.AllowUserToResizeColumns = false;
             this.dGV_Telefonszam.AllowUserToResizeRows = false;
             this.dGV_Telefonszam.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 9F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGV_Telefonszam.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Calibri", 9F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGV_Telefonszam.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dGV_Telefonszam.ColumnHeadersHeight = 29;
             this.dGV_Telefonszam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dGV_Telefonszam.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Telefonszám,
             this.Látható,
             this.TelefonTörlés});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 9F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dGV_Telefonszam.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Calibri", 9F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGV_Telefonszam.DefaultCellStyle = dataGridViewCellStyle8;
             this.dGV_Telefonszam.Location = new System.Drawing.Point(23, 28);
             this.dGV_Telefonszam.Name = "dGV_Telefonszam";
             this.dGV_Telefonszam.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 9F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGV_Telefonszam.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Calibri", 9F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGV_Telefonszam.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dGV_Telefonszam.RowHeadersVisible = false;
             this.dGV_Telefonszam.RowHeadersWidth = 51;
             this.dGV_Telefonszam.Size = new System.Drawing.Size(353, 105);
@@ -565,60 +565,62 @@
             this.dGV_CegKorhazak.AllowUserToAddRows = false;
             this.dGV_CegKorhazak.AllowUserToDeleteRows = false;
             this.dGV_CegKorhazak.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGV_CegKorhazak.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGV_CegKorhazak.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dGV_CegKorhazak.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGV_CegKorhazak.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nev,
             this.Cim});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dGV_CegKorhazak.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGV_CegKorhazak.DefaultCellStyle = dataGridViewCellStyle11;
             this.dGV_CegKorhazak.Location = new System.Drawing.Point(16, 28);
             this.dGV_CegKorhazak.Margin = new System.Windows.Forms.Padding(0);
             this.dGV_CegKorhazak.Name = "dGV_CegKorhazak";
             this.dGV_CegKorhazak.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGV_CegKorhazak.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGV_CegKorhazak.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dGV_CegKorhazak.RowHeadersVisible = false;
             this.dGV_CegKorhazak.RowHeadersWidth = 51;
             this.dGV_CegKorhazak.RowTemplate.Height = 24;
             this.dGV_CegKorhazak.Size = new System.Drawing.Size(411, 220);
             this.dGV_CegKorhazak.TabIndex = 15;
+            this.dGV_CegKorhazak.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dGV_CegKorhazak_DataBindingComplete);
             // 
             // Nev
             // 
             this.Nev.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.Nev.HeaderText = "Név";
-            this.Nev.MinimumWidth = 6;
+            this.Nev.MinimumWidth = 200;
             this.Nev.Name = "Nev";
             this.Nev.ReadOnly = true;
-            this.Nev.Width = 52;
+            this.Nev.Width = 200;
             // 
             // Cim
             // 
-            this.Cim.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Cim.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.Cim.HeaderText = "Cím";
-            this.Cim.MinimumWidth = 6;
+            this.Cim.MinimumWidth = 210;
             this.Cim.Name = "Cim";
             this.Cim.ReadOnly = true;
+            this.Cim.Width = 210;
             // 
             // Company_Profil
             // 
@@ -628,7 +630,7 @@
             this.Controls.Add(this.Pn_Main);
             this.Controls.Add(this.Pn_CegProfil);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximumSize = new System.Drawing.Size(840, 520);
             this.MinimumSize = new System.Drawing.Size(840, 520);
             this.Name = "Company_Profil";
@@ -686,13 +688,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dGV_CegKorhazak;
         private Customs.CCButton Btn_ModositasMentes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nev;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cim;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefonszám;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Látható;
         private System.Windows.Forms.DataGridViewButtonColumn TelefonTörlés;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label Lb_Korhazak;
         private System.Windows.Forms.PictureBox PB_KorhazProfil;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nev;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cim;
     }
 }

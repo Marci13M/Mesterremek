@@ -33,8 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Pn_AdminSzolgaltatasok = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.Lb_AdminSzolgaltatasHozzaadasaCim = new System.Windows.Forms.Label();
             this.Pn_SzolgaltatasHozzaadas = new System.Windows.Forms.Panel();
+            this.Lb_AdminSzolgaltatasHozzaadasaCim = new System.Windows.Forms.Label();
             this.Btn_SzolgaltatasHozzaadas = new CareCompass.Customs.CCButton();
             this.Lb_SzolgaltatasLeiras = new System.Windows.Forms.Label();
             this.Lb_CegNeve = new System.Windows.Forms.Label();
@@ -75,21 +75,9 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 599F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1067, 599);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // Lb_AdminSzolgaltatasHozzaadasaCim
-            // 
-            this.Lb_AdminSzolgaltatasHozzaadasaCim.AutoSize = true;
-            this.Lb_AdminSzolgaltatasHozzaadasaCim.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Lb_AdminSzolgaltatasHozzaadasaCim.ForeColor = System.Drawing.Color.White;
-            this.Lb_AdminSzolgaltatasHozzaadasaCim.Location = new System.Drawing.Point(15, 12);
-            this.Lb_AdminSzolgaltatasHozzaadasaCim.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Lb_AdminSzolgaltatasHozzaadasaCim.Name = "Lb_AdminSzolgaltatasHozzaadasaCim";
-            this.Lb_AdminSzolgaltatasHozzaadasaCim.Size = new System.Drawing.Size(254, 29);
-            this.Lb_AdminSzolgaltatasHozzaadasaCim.TabIndex = 9;
-            this.Lb_AdminSzolgaltatasHozzaadasaCim.Text = "Szolgáltatás hozzáadása";
             // 
             // Pn_SzolgaltatasHozzaadas
             // 
@@ -106,6 +94,18 @@
             this.Pn_SzolgaltatasHozzaadas.Size = new System.Drawing.Size(349, 599);
             this.Pn_SzolgaltatasHozzaadas.TabIndex = 2;
             // 
+            // Lb_AdminSzolgaltatasHozzaadasaCim
+            // 
+            this.Lb_AdminSzolgaltatasHozzaadasaCim.AutoSize = true;
+            this.Lb_AdminSzolgaltatasHozzaadasaCim.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Lb_AdminSzolgaltatasHozzaadasaCim.ForeColor = System.Drawing.Color.White;
+            this.Lb_AdminSzolgaltatasHozzaadasaCim.Location = new System.Drawing.Point(15, 12);
+            this.Lb_AdminSzolgaltatasHozzaadasaCim.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lb_AdminSzolgaltatasHozzaadasaCim.Name = "Lb_AdminSzolgaltatasHozzaadasaCim";
+            this.Lb_AdminSzolgaltatasHozzaadasaCim.Size = new System.Drawing.Size(254, 29);
+            this.Lb_AdminSzolgaltatasHozzaadasaCim.TabIndex = 9;
+            this.Lb_AdminSzolgaltatasHozzaadasaCim.Text = "Szolgáltatás hozzáadása";
+            // 
             // Btn_SzolgaltatasHozzaadas
             // 
             this.Btn_SzolgaltatasHozzaadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(204)))), ((int)(((byte)(188)))));
@@ -118,7 +118,7 @@
             this.Btn_SzolgaltatasHozzaadas.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Btn_SzolgaltatasHozzaadas.ForeColor = System.Drawing.Color.Black;
             this.Btn_SzolgaltatasHozzaadas.Location = new System.Drawing.Point(199, 349);
-            this.Btn_SzolgaltatasHozzaadas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_SzolgaltatasHozzaadas.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_SzolgaltatasHozzaadas.Name = "Btn_SzolgaltatasHozzaadas";
             this.Btn_SzolgaltatasHozzaadas.Size = new System.Drawing.Size(131, 50);
             this.Btn_SzolgaltatasHozzaadas.TabIndex = 32;
@@ -177,6 +177,7 @@
             this.dGV_Szolgaltatasok.AllowUserToResizeRows = false;
             this.dGV_Szolgaltatasok.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dGV_Szolgaltatasok.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.dGV_Szolgaltatasok.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;

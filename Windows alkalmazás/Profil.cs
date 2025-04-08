@@ -73,8 +73,6 @@ namespace CareCompass
             {
                 if (GlobalData.RoleIdentifier == "company")
                 {
-                    GombokBeállítása(Btn_CegModerator);
-
                     Btn_CegProfil.Text = $"{GlobalData.Institution_name} profilja";
                     Btn_CegModerator.Text = $"{GlobalData.UserName} módosítások";
                     GombokBeállítása(Btn_CegProfil);
@@ -102,6 +100,7 @@ namespace CareCompass
                     FormMegnyitasPanelbenKozepreIgazitva<Doctor_Profil>();
                 }
             }
+            
 
         }
        
@@ -171,7 +170,7 @@ namespace CareCompass
 
         #region Gombok beállítása
         //Aktív gombok beállítása (lényegében melyik menüben/időszakban vagyunk)
-        private void GombokBeállítása(object button)
+        public void GombokBeállítása(object button)
         {
             var btn = (Button)button;
 
@@ -181,12 +180,11 @@ namespace CareCompass
                 jelenlegiProfilGomb.BackColor = ThemeManager.CurrentTheme == "Light" ? Color.Transparent : Color.Transparent;
                 jelenlegiProfilGomb.ForeColor = ThemeManager.CurrentTheme == "Light" ? Color.Black : Color.White;
             }
-
-            // Kiválasztott gomb színezése a téma alapján
-            btn.BackColor = ThemeManager.CurrentTheme == "Light" ? Color.FromArgb(179, 185, 196) : Color.FromArgb(22, 26, 29);
-            btn.ForeColor = ThemeManager.CurrentTheme == "Light" ? Color.Black : Color.White;
-
-
+            else
+            {
+                btn.BackColor = ThemeManager.CurrentTheme == "Light" ? Color.FromArgb(179, 185, 196) : Color.FromArgb(22, 26, 29);
+                btn.ForeColor = ThemeManager.CurrentTheme == "Light" ? Color.Black : Color.White;
+            }
             // Frissítjük az aktuális gomb referenciát
             jelenlegiProfilGomb = btn;
         }

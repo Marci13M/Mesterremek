@@ -183,7 +183,6 @@ namespace CareCompass
                 GlobalData.UserName = username;
                 GlobalData.UserId = userid;
                 GlobalData.Institution_name = username;
-                this.Close();
             };
         }
 
@@ -353,6 +352,7 @@ namespace CareCompass
                 Tb_CegCegjegyzekSzam.SelectionStart = cursorPosition + dashCountBeforeCursor;
             }
         }
+
         //Adószám ellenőrzése
         #region Adószám ellenőrzése
         //Adőszám bemeneti formátum kezelő

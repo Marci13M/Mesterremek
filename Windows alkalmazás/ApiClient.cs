@@ -14,7 +14,7 @@ namespace CareCompass
 {
     public class ApiClient
     {
-        public static string BaseUrl = "http://localhost/mesterremek"; //alap url
+        public static string BaseUrl = "http://localhost"; //alap url
 
         private static readonly SemaphoreSlim TokenRefreshSemaphore = new SemaphoreSlim(1, 1); // Aszinkron lock
 

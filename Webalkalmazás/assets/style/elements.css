@@ -478,6 +478,10 @@ textarea:focus {
     text-align: center;
 }
 
+#calendar-with-times {
+    max-width: 800px;
+}
+
 .named-data-container {
     display: flex;
     flex-direction: column;
@@ -759,7 +763,7 @@ button.text-like:hover {
     left: 0;
     height: 80px;
     width: 100%;
-    background-color: var(--drop-shadow-color);
+    background-color: #00000075;
 }
 
 .image-title-section>h1 {
@@ -1056,10 +1060,11 @@ button.text-like:hover {
 .free-times-container:has(.free-time) {
     display: grid;
     width: fit-content;
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    grid-auto-flow: column;
-    grid-auto-columns: auto;
+    max-height: 390px;
+    padding: 2px;
+    overflow: auto;
 }
 
 .free-times-container:has(.no-free-time) {
@@ -1072,6 +1077,7 @@ button.text-like:hover {
     width: 80px;
     outline-color: var(--secondary-color);
     padding: 10px 15px;
+    height: fit-content;
 }
 
 .free-times-container .free-time:hover,
@@ -1269,6 +1275,9 @@ button.text-like:hover {
     }
     .popup-buttons>button:not(:first-of-type) {
         margin: 0;
+    }
+    .free-time {
+        width: 70px !important;
     }
     /* Felhasználói profil */
     .user-data-section {

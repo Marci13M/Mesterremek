@@ -31,19 +31,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hospital_Workers));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dGV_OrvosAdatok = new System.Windows.Forms.DataGridView();
-            this.profilkep = new System.Windows.Forms.DataGridViewImageColumn();
-            this.nev = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.torles = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Lb_KorhazAlkalmazottak = new System.Windows.Forms.Label();
             this.Pn_KorhazAlkalmazottak = new System.Windows.Forms.Panel();
             this.tLP_KorhazAlkalmazottak = new System.Windows.Forms.TableLayoutPanel();
@@ -63,6 +59,10 @@
             this.dGV_Moderatorok = new System.Windows.Forms.DataGridView();
             this.MNev = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.profilkep = new System.Windows.Forms.DataGridViewImageColumn();
+            this.nev = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.torles = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dGV_OrvosAdatok)).BeginInit();
             this.Pn_KorhazAlkalmazottak.SuspendLayout();
             this.tLP_KorhazAlkalmazottak.SuspendLayout();
@@ -105,7 +105,7 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dGV_OrvosAdatok.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dGV_OrvosAdatok.Location = new System.Drawing.Point(0, 39);
+            this.dGV_OrvosAdatok.Location = new System.Drawing.Point(0, 32);
             this.dGV_OrvosAdatok.Margin = new System.Windows.Forms.Padding(0);
             this.dGV_OrvosAdatok.Name = "dGV_OrvosAdatok";
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -120,89 +120,36 @@
             this.dGV_OrvosAdatok.RowHeadersWidth = 51;
             this.dGV_OrvosAdatok.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.dGV_OrvosAdatok.RowTemplate.Height = 100;
-            this.dGV_OrvosAdatok.Size = new System.Drawing.Size(651, 270);
+            this.dGV_OrvosAdatok.Size = new System.Drawing.Size(488, 219);
             this.dGV_OrvosAdatok.TabIndex = 0;
             this.dGV_OrvosAdatok.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dGV_OrvosAdatok_DataBindingComplete);
-            // 
-            // profilkep
-            // 
-            this.profilkep.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle2.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle2.NullValue")));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.profilkep.DefaultCellStyle = dataGridViewCellStyle2;
-            this.profilkep.Frozen = true;
-            this.profilkep.HeaderText = "Profilkép";
-            this.profilkep.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.profilkep.MinimumWidth = 100;
-            this.profilkep.Name = "profilkep";
-            this.profilkep.ReadOnly = true;
-            this.profilkep.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.profilkep.Width = 125;
-            // 
-            // nev
-            // 
-            this.nev.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.nev.DefaultCellStyle = dataGridViewCellStyle3;
-            this.nev.HeaderText = "Név";
-            this.nev.MinimumWidth = 6;
-            this.nev.Name = "nev";
-            this.nev.ReadOnly = true;
-            this.nev.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.nev.Width = 71;
-            // 
-            // email
-            // 
-            this.email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.email.DefaultCellStyle = dataGridViewCellStyle4;
-            this.email.HeaderText = "Email";
-            this.email.MinimumWidth = 200;
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            // 
-            // torles
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.torles.DefaultCellStyle = dataGridViewCellStyle5;
-            this.torles.FillWeight = 80F;
-            this.torles.HeaderText = "Törlés";
-            this.torles.MinimumWidth = 80;
-            this.torles.Name = "torles";
-            this.torles.ReadOnly = true;
-            this.torles.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.torles.Width = 80;
             // 
             // Lb_KorhazAlkalmazottak
             // 
             this.Lb_KorhazAlkalmazottak.AutoSize = true;
             this.Lb_KorhazAlkalmazottak.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Lb_KorhazAlkalmazottak.ForeColor = System.Drawing.Color.White;
-            this.Lb_KorhazAlkalmazottak.Location = new System.Drawing.Point(21, 10);
-            this.Lb_KorhazAlkalmazottak.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lb_KorhazAlkalmazottak.Location = new System.Drawing.Point(16, 8);
             this.Lb_KorhazAlkalmazottak.Name = "Lb_KorhazAlkalmazottak";
-            this.Lb_KorhazAlkalmazottak.Size = new System.Drawing.Size(176, 33);
+            this.Lb_KorhazAlkalmazottak.Size = new System.Drawing.Size(135, 26);
             this.Lb_KorhazAlkalmazottak.TabIndex = 3;
             this.Lb_KorhazAlkalmazottak.Text = "Alkalmazottak";
             // 
             // Pn_KorhazAlkalmazottak
             // 
             this.Pn_KorhazAlkalmazottak.Controls.Add(this.tLP_KorhazAlkalmazottak);
-            this.Pn_KorhazAlkalmazottak.Location = new System.Drawing.Point(27, 44);
+            this.Pn_KorhazAlkalmazottak.Location = new System.Drawing.Point(20, 36);
             this.Pn_KorhazAlkalmazottak.Margin = new System.Windows.Forms.Padding(0);
             this.Pn_KorhazAlkalmazottak.Name = "Pn_KorhazAlkalmazottak";
-            this.Pn_KorhazAlkalmazottak.Size = new System.Drawing.Size(1064, 618);
+            this.Pn_KorhazAlkalmazottak.Size = new System.Drawing.Size(798, 502);
             this.Pn_KorhazAlkalmazottak.TabIndex = 5;
             // 
             // tLP_KorhazAlkalmazottak
             // 
             this.tLP_KorhazAlkalmazottak.ColumnCount = 3;
             this.tLP_KorhazAlkalmazottak.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tLP_KorhazAlkalmazottak.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tLP_KorhazAlkalmazottak.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 373F));
+            this.tLP_KorhazAlkalmazottak.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tLP_KorhazAlkalmazottak.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 280F));
             this.tLP_KorhazAlkalmazottak.Controls.Add(this.Pn_UjKorhaz, 2, 0);
             this.tLP_KorhazAlkalmazottak.Controls.Add(this.Pn_Jobb, 1, 0);
             this.tLP_KorhazAlkalmazottak.Controls.Add(this.tLP_Tablazatok, 0, 0);
@@ -212,7 +159,7 @@
             this.tLP_KorhazAlkalmazottak.Name = "tLP_KorhazAlkalmazottak";
             this.tLP_KorhazAlkalmazottak.RowCount = 1;
             this.tLP_KorhazAlkalmazottak.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tLP_KorhazAlkalmazottak.Size = new System.Drawing.Size(1064, 618);
+            this.tLP_KorhazAlkalmazottak.Size = new System.Drawing.Size(798, 502);
             this.tLP_KorhazAlkalmazottak.TabIndex = 0;
             // 
             // Pn_UjKorhaz
@@ -221,11 +168,11 @@
             this.Pn_UjKorhaz.Controls.Add(this.Btn_OrvosHozzaadas);
             this.Pn_UjKorhaz.Controls.Add(this.Lb_OrvosNev);
             this.Pn_UjKorhaz.Controls.Add(this.Lb_UjOrvosHozzaadas);
-            this.Pn_UjKorhaz.Location = new System.Drawing.Point(691, 0);
+            this.Pn_UjKorhaz.Location = new System.Drawing.Point(518, 0);
             this.Pn_UjKorhaz.Margin = new System.Windows.Forms.Padding(0);
-            this.Pn_UjKorhaz.MinimumSize = new System.Drawing.Size(373, 599);
+            this.Pn_UjKorhaz.MinimumSize = new System.Drawing.Size(280, 487);
             this.Pn_UjKorhaz.Name = "Pn_UjKorhaz";
-            this.Pn_UjKorhaz.Size = new System.Drawing.Size(373, 599);
+            this.Pn_UjKorhaz.Size = new System.Drawing.Size(280, 487);
             this.Pn_UjKorhaz.TabIndex = 1;
             // 
             // CB_OrvosNev
@@ -233,10 +180,10 @@
             this.CB_OrvosNev.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CB_OrvosNev.Font = new System.Drawing.Font("Calibri", 9.75F);
             this.CB_OrvosNev.FormattingEnabled = true;
-            this.CB_OrvosNev.Location = new System.Drawing.Point(17, 106);
-            this.CB_OrvosNev.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CB_OrvosNev.Location = new System.Drawing.Point(13, 86);
+            this.CB_OrvosNev.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CB_OrvosNev.Name = "CB_OrvosNev";
-            this.CB_OrvosNev.Size = new System.Drawing.Size(335, 27);
+            this.CB_OrvosNev.Size = new System.Drawing.Size(252, 23);
             this.CB_OrvosNev.TabIndex = 17;
             // 
             // Btn_OrvosHozzaadas
@@ -250,10 +197,9 @@
             this.Btn_OrvosHozzaadas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_OrvosHozzaadas.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Btn_OrvosHozzaadas.ForeColor = System.Drawing.Color.Black;
-            this.Btn_OrvosHozzaadas.Location = new System.Drawing.Point(152, 149);
-            this.Btn_OrvosHozzaadas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_OrvosHozzaadas.Location = new System.Drawing.Point(114, 121);
             this.Btn_OrvosHozzaadas.Name = "Btn_OrvosHozzaadas";
-            this.Btn_OrvosHozzaadas.Size = new System.Drawing.Size(200, 49);
+            this.Btn_OrvosHozzaadas.Size = new System.Drawing.Size(150, 40);
             this.Btn_OrvosHozzaadas.TabIndex = 16;
             this.Btn_OrvosHozzaadas.Text = "Hozzáadás";
             this.Btn_OrvosHozzaadas.TextColor = System.Drawing.Color.Black;
@@ -265,10 +211,9 @@
             this.Lb_OrvosNev.AutoSize = true;
             this.Lb_OrvosNev.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Lb_OrvosNev.ForeColor = System.Drawing.Color.White;
-            this.Lb_OrvosNev.Location = new System.Drawing.Point(13, 69);
-            this.Lb_OrvosNev.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lb_OrvosNev.Location = new System.Drawing.Point(10, 56);
             this.Lb_OrvosNev.Name = "Lb_OrvosNev";
-            this.Lb_OrvosNev.Size = new System.Drawing.Size(108, 24);
+            this.Lb_OrvosNev.Size = new System.Drawing.Size(86, 19);
             this.Lb_OrvosNev.TabIndex = 8;
             this.Lb_OrvosNev.Text = "Orvos neve:";
             // 
@@ -277,20 +222,19 @@
             this.Lb_UjOrvosHozzaadas.AutoSize = true;
             this.Lb_UjOrvosHozzaadas.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Lb_UjOrvosHozzaadas.ForeColor = System.Drawing.Color.White;
-            this.Lb_UjOrvosHozzaadas.Location = new System.Drawing.Point(12, 14);
-            this.Lb_UjOrvosHozzaadas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lb_UjOrvosHozzaadas.Location = new System.Drawing.Point(9, 11);
             this.Lb_UjOrvosHozzaadas.Name = "Lb_UjOrvosHozzaadas";
-            this.Lb_UjOrvosHozzaadas.Size = new System.Drawing.Size(218, 29);
+            this.Lb_UjOrvosHozzaadas.Size = new System.Drawing.Size(169, 23);
             this.Lb_UjOrvosHozzaadas.TabIndex = 6;
             this.Lb_UjOrvosHozzaadas.Text = "Új orvos hozzáadása";
             // 
             // Pn_Jobb
             // 
             this.Pn_Jobb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Pn_Jobb.Location = new System.Drawing.Point(651, 0);
+            this.Pn_Jobb.Location = new System.Drawing.Point(488, 0);
             this.Pn_Jobb.Margin = new System.Windows.Forms.Padding(0);
             this.Pn_Jobb.Name = "Pn_Jobb";
-            this.Pn_Jobb.Size = new System.Drawing.Size(40, 618);
+            this.Pn_Jobb.Size = new System.Drawing.Size(30, 502);
             this.Pn_Jobb.TabIndex = 2;
             // 
             // tLP_Tablazatok
@@ -307,7 +251,7 @@
             this.tLP_Tablazatok.RowCount = 2;
             this.tLP_Tablazatok.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tLP_Tablazatok.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tLP_Tablazatok.Size = new System.Drawing.Size(651, 618);
+            this.tLP_Tablazatok.Size = new System.Drawing.Size(488, 502);
             this.tLP_Tablazatok.TabIndex = 3;
             // 
             // tLP_Orvosok
@@ -321,9 +265,9 @@
             this.tLP_Orvosok.Margin = new System.Windows.Forms.Padding(0);
             this.tLP_Orvosok.Name = "tLP_Orvosok";
             this.tLP_Orvosok.RowCount = 2;
-            this.tLP_Orvosok.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.tLP_Orvosok.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tLP_Orvosok.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tLP_Orvosok.Size = new System.Drawing.Size(651, 309);
+            this.tLP_Orvosok.Size = new System.Drawing.Size(488, 251);
             this.tLP_Orvosok.TabIndex = 0;
             // 
             // Pn_Orvosok
@@ -333,7 +277,7 @@
             this.Pn_Orvosok.Location = new System.Drawing.Point(0, 0);
             this.Pn_Orvosok.Margin = new System.Windows.Forms.Padding(0);
             this.Pn_Orvosok.Name = "Pn_Orvosok";
-            this.Pn_Orvosok.Size = new System.Drawing.Size(651, 39);
+            this.Pn_Orvosok.Size = new System.Drawing.Size(488, 32);
             this.Pn_Orvosok.TabIndex = 2;
             // 
             // Lb_Orvosok
@@ -341,9 +285,10 @@
             this.Lb_Orvosok.AutoSize = true;
             this.Lb_Orvosok.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.Lb_Orvosok.ForeColor = System.Drawing.Color.White;
-            this.Lb_Orvosok.Location = new System.Drawing.Point(-5, 5);
+            this.Lb_Orvosok.Location = new System.Drawing.Point(-4, 4);
+            this.Lb_Orvosok.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lb_Orvosok.Name = "Lb_Orvosok";
-            this.Lb_Orvosok.Size = new System.Drawing.Size(97, 29);
+            this.Lb_Orvosok.Size = new System.Drawing.Size(76, 23);
             this.Lb_Orvosok.TabIndex = 2;
             this.Lb_Orvosok.Text = "Orvosok";
             // 
@@ -354,13 +299,13 @@
             this.tLP_Moderatorok.Controls.Add(this.Pn_Moderatorok, 0, 0);
             this.tLP_Moderatorok.Controls.Add(this.dGV_Moderatorok, 0, 1);
             this.tLP_Moderatorok.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tLP_Moderatorok.Location = new System.Drawing.Point(0, 309);
+            this.tLP_Moderatorok.Location = new System.Drawing.Point(0, 251);
             this.tLP_Moderatorok.Margin = new System.Windows.Forms.Padding(0);
             this.tLP_Moderatorok.Name = "tLP_Moderatorok";
             this.tLP_Moderatorok.RowCount = 2;
-            this.tLP_Moderatorok.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.tLP_Moderatorok.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tLP_Moderatorok.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tLP_Moderatorok.Size = new System.Drawing.Size(651, 309);
+            this.tLP_Moderatorok.Size = new System.Drawing.Size(488, 251);
             this.tLP_Moderatorok.TabIndex = 1;
             // 
             // Pn_Moderatorok
@@ -370,7 +315,7 @@
             this.Pn_Moderatorok.Location = new System.Drawing.Point(0, 0);
             this.Pn_Moderatorok.Margin = new System.Windows.Forms.Padding(0);
             this.Pn_Moderatorok.Name = "Pn_Moderatorok";
-            this.Pn_Moderatorok.Size = new System.Drawing.Size(651, 39);
+            this.Pn_Moderatorok.Size = new System.Drawing.Size(488, 32);
             this.Pn_Moderatorok.TabIndex = 0;
             // 
             // Lb_Moderatorok
@@ -378,9 +323,10 @@
             this.Lb_Moderatorok.AutoSize = true;
             this.Lb_Moderatorok.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.Lb_Moderatorok.ForeColor = System.Drawing.Color.White;
-            this.Lb_Moderatorok.Location = new System.Drawing.Point(-5, 5);
+            this.Lb_Moderatorok.Location = new System.Drawing.Point(-4, 4);
+            this.Lb_Moderatorok.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lb_Moderatorok.Name = "Lb_Moderatorok";
-            this.Lb_Moderatorok.Size = new System.Drawing.Size(147, 29);
+            this.Lb_Moderatorok.Size = new System.Drawing.Size(116, 23);
             this.Lb_Moderatorok.TabIndex = 3;
             this.Lb_Moderatorok.Text = "Moderátorok";
             // 
@@ -411,7 +357,7 @@
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dGV_Moderatorok.DefaultCellStyle = dataGridViewCellStyle9;
             this.dGV_Moderatorok.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dGV_Moderatorok.Location = new System.Drawing.Point(0, 39);
+            this.dGV_Moderatorok.Location = new System.Drawing.Point(0, 32);
             this.dGV_Moderatorok.Margin = new System.Windows.Forms.Padding(0);
             this.dGV_Moderatorok.Name = "dGV_Moderatorok";
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -426,7 +372,7 @@
             this.dGV_Moderatorok.RowHeadersWidth = 51;
             this.dGV_Moderatorok.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.dGV_Moderatorok.RowTemplate.Height = 24;
-            this.dGV_Moderatorok.Size = new System.Drawing.Size(651, 270);
+            this.dGV_Moderatorok.Size = new System.Drawing.Size(488, 219);
             this.dGV_Moderatorok.TabIndex = 1;
             // 
             // MNev
@@ -435,7 +381,7 @@
             this.MNev.HeaderText = "Név";
             this.MNev.MinimumWidth = 6;
             this.MNev.Name = "MNev";
-            this.MNev.Width = 71;
+            this.MNev.Width = 58;
             // 
             // MEmail
             // 
@@ -445,16 +391,66 @@
             this.MEmail.Name = "MEmail";
             this.MEmail.ReadOnly = true;
             // 
+            // profilkep
+            // 
+            this.profilkep.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle2.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle2.NullValue")));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.profilkep.DefaultCellStyle = dataGridViewCellStyle2;
+            this.profilkep.Frozen = true;
+            this.profilkep.HeaderText = "Profilkép";
+            this.profilkep.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.profilkep.MinimumWidth = 100;
+            this.profilkep.Name = "profilkep";
+            this.profilkep.ReadOnly = true;
+            this.profilkep.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // nev
+            // 
+            this.nev.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.nev.DefaultCellStyle = dataGridViewCellStyle3;
+            this.nev.HeaderText = "Név";
+            this.nev.MinimumWidth = 6;
+            this.nev.Name = "nev";
+            this.nev.ReadOnly = true;
+            this.nev.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.nev.Width = 58;
+            // 
+            // email
+            // 
+            this.email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.email.DefaultCellStyle = dataGridViewCellStyle4;
+            this.email.HeaderText = "Email";
+            this.email.MinimumWidth = 200;
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
+            // torles
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.torles.DefaultCellStyle = dataGridViewCellStyle5;
+            this.torles.FillWeight = 80F;
+            this.torles.HeaderText = "Törlés";
+            this.torles.MinimumWidth = 80;
+            this.torles.Name = "torles";
+            this.torles.ReadOnly = true;
+            this.torles.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.torles.Width = 80;
+            // 
             // Hospital_Workers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(57)))), ((int)(((byte)(92)))));
-            this.ClientSize = new System.Drawing.Size(1120, 686);
+            this.ClientSize = new System.Drawing.Size(840, 557);
             this.Controls.Add(this.Pn_KorhazAlkalmazottak);
             this.Controls.Add(this.Lb_KorhazAlkalmazottak);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Hospital_Workers";
             this.Load += new System.EventHandler(this.Korhaz_Doctor_Load);
             this.SizeChanged += new System.EventHandler(this.Korhaz_Doctor_SizeChanged);

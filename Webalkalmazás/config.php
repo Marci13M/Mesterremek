@@ -15,10 +15,10 @@ $GLOBALS["database_user"] = "root";
 $GLOBALS["database_password"] = "";
 
 // email
-$GLOBALS['email_username'] = "carecompass@nyikonyuk.hu";
-$GLOBALS['email_password'] = "?tDeh^Yv=t88"; //awrclqvgxouheabk
-$GLOBALS['email_port'] = 465;
-$GLOBALS['email_host'] = "mail.nyikonyuk.hu";
+$GLOBALS['email_username'] = ""; // ide kerül az email cím
+$GLOBALS['email_password'] = ""; // ide kerül a jelszó
+$GLOBALS['email_port'] = 465; // ide kerül a port
+$GLOBALS['email_host'] = ""; // ide kerül a kiszolgáló címe
 
 
 function Redirect($url = "/"){

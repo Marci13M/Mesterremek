@@ -383,6 +383,7 @@ namespace CareCompass
                         Lb_AlkalmazottKorhaz.Visible = false;
                         CB_AlkalmazottKorhaz.Visible = false;
                         GetDoctors();
+                        GetRoles();
                     }
                 }
             }

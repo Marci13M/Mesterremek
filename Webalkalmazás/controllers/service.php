@@ -232,7 +232,7 @@ if($data['success']){
     <div class="popup-container" id="more-options-modal">
         <div class="popup">
             <h2>További időpontok</h2>
-            <div class="form-flow-column grid-column-2 edit-profile max-width">
+            <div class="form-flow-column grid-column-2 edit-profile max-width" id="calendar-with-times">
                 <div class="calendar">
                     <div class="calendar-header">
                         <button id="prev-month">‹</button>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 06, 2025 at 11:45 PM
+-- Generation Time: Apr 08, 2025 at 10:58 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -580,6 +580,13 @@ CREATE TABLE `users` (
   `role_id` int(11) NOT NULL,
   `deleted` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `role_id`, `deleted`) VALUES
+(1, 'Admin Lajos', 'ccadmin@gmail.com', 'cafa36b6f616741f743d0916332c22a1f79804a864a6ff68d93325e81803e687', 5, 0);
 
 -- --------------------------------------------------------
 
@@ -4361,7 +4368,6 @@ ALTER TABLE `user_company`
 --
 ALTER TABLE `user_data`
   ADD PRIMARY KEY (`user_id`),
-  ADD UNIQUE KEY `TAJ` (`TAJ`),
   ADD KEY `gender_id` (`gender_id`);
 
 --
@@ -4485,7 +4491,7 @@ ALTER TABLE `tokens`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `user_logs`

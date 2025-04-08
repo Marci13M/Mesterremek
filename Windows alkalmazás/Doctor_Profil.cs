@@ -484,7 +484,7 @@ namespace CareCompass
 
                         // Api meghívása
                         await AddDoctorService(doctor_id, service_id);
-                        GetDoctor();
+                        GetDoctorServices();
                         GetServices();
                     }
                 }
@@ -636,7 +636,7 @@ namespace CareCompass
             using (var image = Image.FromFile(imagePath))
             {
                 // Kép átméretezése, hogy kisebb legyen
-                var resizedImage = new Bitmap(image, new Size(800, 600)); // Igény szerint módosítható
+                var resizedImage = new Bitmap(image, new Size(800, 800)); // Igény szerint módosítható
 
                 using (var ms = new MemoryStream())
                 {
@@ -648,6 +648,18 @@ namespace CareCompass
                     return $"data:{mimeType};base64,{base64String}";
                 }
             }
+            /*using (var fs = new FileStream(imagePath, FileMode.Open, FileAccess.Read))
+            using (var image = Image.FromStream(fs, true, false))
+            using (var resizedImage = new Bitmap(image, new Size(800, 800)))
+            using (var ms = new MemoryStream())
+            {
+                resizedImage.Save(ms, ImageFormat.Jpeg);
+                byte[] imageBytes = ms.ToArray();
+                string base64String = Convert.ToBase64String(imageBytes);
+                string mimeType = GetMimeType(imagePath);
+
+                return $"data:{mimeType};base64,{base64String}";
+            }*/
         }
 
         //A kép file típusának megállapítása

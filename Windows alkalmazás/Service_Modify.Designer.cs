@@ -65,7 +65,7 @@
             this.Pn_SzolgaltatasModositas.Location = new System.Drawing.Point(0, 0);
             this.Pn_SzolgaltatasModositas.Margin = new System.Windows.Forms.Padding(0);
             this.Pn_SzolgaltatasModositas.Name = "Pn_SzolgaltatasModositas";
-            this.Pn_SzolgaltatasModositas.Size = new System.Drawing.Size(284, 426);
+            this.Pn_SzolgaltatasModositas.Size = new System.Drawing.Size(379, 524);
             this.Pn_SzolgaltatasModositas.TabIndex = 11;
             // 
             // Lb_Perc
@@ -73,9 +73,10 @@
             this.Lb_Perc.AutoSize = true;
             this.Lb_Perc.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Lb_Perc.ForeColor = System.Drawing.Color.White;
-            this.Lb_Perc.Location = new System.Drawing.Point(114, 284);
+            this.Lb_Perc.Location = new System.Drawing.Point(152, 350);
+            this.Lb_Perc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lb_Perc.Name = "Lb_Perc";
-            this.Lb_Perc.Size = new System.Drawing.Size(37, 19);
+            this.Lb_Perc.Size = new System.Drawing.Size(45, 24);
             this.Lb_Perc.TabIndex = 38;
             this.Lb_Perc.Text = "Perc";
             // 
@@ -84,23 +85,25 @@
             this.Lb_Ft.AutoSize = true;
             this.Lb_Ft.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Lb_Ft.ForeColor = System.Drawing.Color.White;
-            this.Lb_Ft.Location = new System.Drawing.Point(134, 336);
+            this.Lb_Ft.Location = new System.Drawing.Point(179, 414);
+            this.Lb_Ft.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lb_Ft.Name = "Lb_Ft";
-            this.Lb_Ft.Size = new System.Drawing.Size(21, 19);
+            this.Lb_Ft.Size = new System.Drawing.Size(26, 24);
             this.Lb_Ft.TabIndex = 37;
             this.Lb_Ft.Text = "Ft";
             // 
             // nUP_SzolgaltatasAr
             // 
             this.nUP_SzolgaltatasAr.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.nUP_SzolgaltatasAr.Location = new System.Drawing.Point(20, 334);
+            this.nUP_SzolgaltatasAr.Location = new System.Drawing.Point(27, 411);
+            this.nUP_SzolgaltatasAr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nUP_SzolgaltatasAr.Maximum = new decimal(new int[] {
             9000000,
             0,
             0,
             0});
             this.nUP_SzolgaltatasAr.Name = "nUP_SzolgaltatasAr";
-            this.nUP_SzolgaltatasAr.Size = new System.Drawing.Size(107, 23);
+            this.nUP_SzolgaltatasAr.Size = new System.Drawing.Size(143, 27);
             this.nUP_SzolgaltatasAr.TabIndex = 36;
             // 
             // nUP_SzolgaltatasIdo
@@ -111,7 +114,8 @@
             0,
             0,
             0});
-            this.nUP_SzolgaltatasIdo.Location = new System.Drawing.Point(20, 281);
+            this.nUP_SzolgaltatasIdo.Location = new System.Drawing.Point(27, 346);
+            this.nUP_SzolgaltatasIdo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nUP_SzolgaltatasIdo.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -123,7 +127,7 @@
             0,
             0});
             this.nUP_SzolgaltatasIdo.Name = "nUP_SzolgaltatasIdo";
-            this.nUP_SzolgaltatasIdo.Size = new System.Drawing.Size(88, 23);
+            this.nUP_SzolgaltatasIdo.Size = new System.Drawing.Size(117, 27);
             this.nUP_SzolgaltatasIdo.TabIndex = 35;
             this.nUP_SzolgaltatasIdo.Value = new decimal(new int[] {
             5,
@@ -136,9 +140,10 @@
             this.Lb_SzolgaltatasAr.AutoSize = true;
             this.Lb_SzolgaltatasAr.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Lb_SzolgaltatasAr.ForeColor = System.Drawing.Color.White;
-            this.Lb_SzolgaltatasAr.Location = new System.Drawing.Point(17, 311);
+            this.Lb_SzolgaltatasAr.Location = new System.Drawing.Point(23, 383);
+            this.Lb_SzolgaltatasAr.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lb_SzolgaltatasAr.Name = "Lb_SzolgaltatasAr";
-            this.Lb_SzolgaltatasAr.Size = new System.Drawing.Size(142, 19);
+            this.Lb_SzolgaltatasAr.Size = new System.Drawing.Size(179, 24);
             this.Lb_SzolgaltatasAr.TabIndex = 34;
             this.Lb_SzolgaltatasAr.Text = "Szolgáltatás ára (Ft):";
             // 
@@ -147,9 +152,10 @@
             this.Lb_SzolgaltatasIdo.AutoSize = true;
             this.Lb_SzolgaltatasIdo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Lb_SzolgaltatasIdo.ForeColor = System.Drawing.Color.White;
-            this.Lb_SzolgaltatasIdo.Location = new System.Drawing.Point(17, 258);
+            this.Lb_SzolgaltatasIdo.Location = new System.Drawing.Point(23, 318);
+            this.Lb_SzolgaltatasIdo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lb_SzolgaltatasIdo.Name = "Lb_SzolgaltatasIdo";
-            this.Lb_SzolgaltatasIdo.Size = new System.Drawing.Size(166, 19);
+            this.Lb_SzolgaltatasIdo.Size = new System.Drawing.Size(213, 24);
             this.Lb_SzolgaltatasIdo.TabIndex = 33;
             this.Lb_SzolgaltatasIdo.Text = "Szolgáltatás időtartama:";
             // 
@@ -164,9 +170,10 @@
             this.Btn_SzolgaltatasHozzaadas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_SzolgaltatasHozzaadas.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Btn_SzolgaltatasHozzaadas.ForeColor = System.Drawing.Color.Black;
-            this.Btn_SzolgaltatasHozzaadas.Location = new System.Drawing.Point(167, 375);
+            this.Btn_SzolgaltatasHozzaadas.Location = new System.Drawing.Point(223, 462);
+            this.Btn_SzolgaltatasHozzaadas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_SzolgaltatasHozzaadas.Name = "Btn_SzolgaltatasHozzaadas";
-            this.Btn_SzolgaltatasHozzaadas.Size = new System.Drawing.Size(100, 40);
+            this.Btn_SzolgaltatasHozzaadas.Size = new System.Drawing.Size(133, 49);
             this.Btn_SzolgaltatasHozzaadas.TabIndex = 32;
             this.Btn_SzolgaltatasHozzaadas.Text = "Módosítás";
             this.Btn_SzolgaltatasHozzaadas.TextColor = System.Drawing.Color.Black;
@@ -184,10 +191,10 @@
             this.CCB_Megse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CCB_Megse.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.CCB_Megse.ForeColor = System.Drawing.Color.White;
-            this.CCB_Megse.Location = new System.Drawing.Point(20, 375);
+            this.CCB_Megse.Location = new System.Drawing.Point(27, 462);
             this.CCB_Megse.Margin = new System.Windows.Forms.Padding(0);
             this.CCB_Megse.Name = "CCB_Megse";
-            this.CCB_Megse.Size = new System.Drawing.Size(100, 40);
+            this.CCB_Megse.Size = new System.Drawing.Size(133, 49);
             this.CCB_Megse.TabIndex = 9;
             this.CCB_Megse.Text = "Mégse";
             this.CCB_Megse.TextColor = System.Drawing.Color.White;
@@ -199,9 +206,10 @@
             this.Lb_SzolgaltatasLeiras.AutoSize = true;
             this.Lb_SzolgaltatasLeiras.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Lb_SzolgaltatasLeiras.ForeColor = System.Drawing.Color.White;
-            this.Lb_SzolgaltatasLeiras.Location = new System.Drawing.Point(17, 68);
+            this.Lb_SzolgaltatasLeiras.Location = new System.Drawing.Point(23, 84);
+            this.Lb_SzolgaltatasLeiras.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lb_SzolgaltatasLeiras.Name = "Lb_SzolgaltatasLeiras";
-            this.Lb_SzolgaltatasLeiras.Size = new System.Drawing.Size(139, 19);
+            this.Lb_SzolgaltatasLeiras.Size = new System.Drawing.Size(174, 24);
             this.Lb_SzolgaltatasLeiras.TabIndex = 31;
             this.Lb_SzolgaltatasLeiras.Text = "Szolgáltatás leírása:";
             // 
@@ -210,40 +218,43 @@
             this.Lb_SzolgaltatasNev.AutoSize = true;
             this.Lb_SzolgaltatasNev.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Lb_SzolgaltatasNev.ForeColor = System.Drawing.Color.White;
-            this.Lb_SzolgaltatasNev.Location = new System.Drawing.Point(16, 9);
+            this.Lb_SzolgaltatasNev.Location = new System.Drawing.Point(21, 11);
+            this.Lb_SzolgaltatasNev.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lb_SzolgaltatasNev.Name = "Lb_SzolgaltatasNev";
-            this.Lb_SzolgaltatasNev.Size = new System.Drawing.Size(126, 19);
+            this.Lb_SzolgaltatasNev.Size = new System.Drawing.Size(159, 24);
             this.Lb_SzolgaltatasNev.TabIndex = 30;
             this.Lb_SzolgaltatasNev.Text = "Szolgáltatás neve:";
             // 
             // Tb_SzolgaltatasLeiras
             // 
             this.Tb_SzolgaltatasLeiras.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Tb_SzolgaltatasLeiras.Location = new System.Drawing.Point(19, 89);
-            this.Tb_SzolgaltatasLeiras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tb_SzolgaltatasLeiras.Location = new System.Drawing.Point(25, 110);
+            this.Tb_SzolgaltatasLeiras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Tb_SzolgaltatasLeiras.Multiline = true;
             this.Tb_SzolgaltatasLeiras.Name = "Tb_SzolgaltatasLeiras";
-            this.Tb_SzolgaltatasLeiras.Size = new System.Drawing.Size(249, 142);
+            this.Tb_SzolgaltatasLeiras.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.Tb_SzolgaltatasLeiras.Size = new System.Drawing.Size(331, 174);
             this.Tb_SzolgaltatasLeiras.TabIndex = 1;
             // 
             // Tb_SzolgaltatasNev
             // 
             this.Tb_SzolgaltatasNev.Enabled = false;
             this.Tb_SzolgaltatasNev.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Tb_SzolgaltatasNev.Location = new System.Drawing.Point(19, 30);
-            this.Tb_SzolgaltatasNev.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tb_SzolgaltatasNev.Location = new System.Drawing.Point(25, 37);
+            this.Tb_SzolgaltatasNev.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Tb_SzolgaltatasNev.Name = "Tb_SzolgaltatasNev";
             this.Tb_SzolgaltatasNev.ReadOnly = true;
-            this.Tb_SzolgaltatasNev.Size = new System.Drawing.Size(249, 23);
+            this.Tb_SzolgaltatasNev.Size = new System.Drawing.Size(331, 27);
             this.Tb_SzolgaltatasNev.TabIndex = 0;
             // 
             // Service_Modify
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 426);
+            this.ClientSize = new System.Drawing.Size(379, 524);
             this.Controls.Add(this.Pn_SzolgaltatasModositas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Service_Modify";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Szolgáltatás módosítás";

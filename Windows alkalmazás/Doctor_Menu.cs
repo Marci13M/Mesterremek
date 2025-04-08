@@ -78,7 +78,7 @@ namespace CareCompass
 
                 if (!string.IsNullOrEmpty(response))
                 {
-                    await Task.Delay(1000);
+                    await Task.Delay(1500);
                     System.Diagnostics.Process.Start(new ProcessStartInfo
                     {
                         FileName = response,

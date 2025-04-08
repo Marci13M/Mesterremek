@@ -105,7 +105,6 @@ namespace CareCompass
             Zip = data.zip_codes.ToObject<List<dynamic>>();
         }
 
-
         #region Datagridview kattintások (törlés és felületre való belépés)
         private async void DataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -213,7 +212,6 @@ namespace CareCompass
                 GlobalData.RoleIdentifier = "company"; // Visszaállítás
                 GlobalData.UserName = username;
                 GlobalData.Institution_name=companyname;
-                this.Close();
             };
             
         }
@@ -269,7 +267,6 @@ namespace CareCompass
                 MessageBox.Show("Kérlek !", "Figyelmeztetés", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
 
         //Irányítószám és település ellenőrzése
         private bool ZipGood()

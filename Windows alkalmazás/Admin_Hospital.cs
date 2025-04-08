@@ -209,13 +209,13 @@ namespace CareCompass
 
             Debug.WriteLine($"halihó {hospitalid}");
             
-            string username = Bejelentkezés.GlobalData.UserName;
+            string username = GlobalData.UserName;
             GlobalData.HospitalId = hospitalid;
             GlobalData.CompanyId = company_id;
             GlobalData.UserName = "Korhaz";
             GlobalData.RoleIdentifier = "hospital";
             GlobalData.Institution_name = hospitalName;
-            Debug.WriteLine($"hali: {Bejelentkezés.GlobalData.HospitalId}");
+            Debug.WriteLine($"hali: {GlobalData.HospitalId}");
             //Main mainForm = new Main();
             //mainForm.Role = role;  // Átadjuk a role értéket
             Main mainForm = new Main();
@@ -228,23 +228,22 @@ namespace CareCompass
             mainForm.Activated += (s, args) =>
             {
                 Debug.WriteLine("Main form aktív, RoleIdentifier = hospital");
-                Bejelentkezés.GlobalData.RoleIdentifier = "hospital";
-                Bejelentkezés.GlobalData.Institution_name = hospitalName;
+                GlobalData.RoleIdentifier = "hospital";
+                GlobalData.Institution_name = hospitalName;
             };
 
             // Figyeljük, mikor veszti el a fókuszt a Main form
             mainForm.Deactivate += (s, args) =>
             {
                 Debug.WriteLine("Main form elvesztette a fókuszt, RoleIdentifier = admin");
-                Bejelentkezés.GlobalData.RoleIdentifier = "admin";
-                Bejelentkezés.GlobalData.UserName = username;
+                GlobalData.RoleIdentifier = "admin";
+                GlobalData.UserName = username;
             };
             // Amikor a Main form bezárul Form1 bezárul
             mainForm.FormClosed += (s, args) =>
             {
-                Bejelentkezés.GlobalData.RoleIdentifier = "admin"; // Visszaállítás
-                Bejelentkezés.GlobalData.UserName = username;
-                this.Close();
+                GlobalData.RoleIdentifier = "admin"; // Visszaállítás
+                GlobalData.UserName = username;
             };
 
         }

@@ -32,6 +32,7 @@ namespace CareCompass
             GetHospitals();
             GetZip();
             dGV_Telefonszam.CellContentClick += DataGridView_CellContentClick;
+            dGV_CegKorhazak.DataBindingComplete += dGV_CegKorhazak_DataBindingComplete;
         }
 
         //Lekérdezések tárolására szolgáló listák
@@ -177,7 +178,7 @@ namespace CareCompass
                 string projectDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
 
                 // Kép teljes elérési útja a projekt mappájában
-                string replacementImagePath = Path.Combine(projectDirectory, "Images", "Replacement", "hospital_placeholder.png");
+                string replacementImagePath = Path.Combine(projectDirectory, "Images", "Replacement", "logo_placeholder.png");
                 if (File.Exists(replacementImagePath))
                 {
                     PB_KorhazProfil.Image = Image.FromFile(replacementImagePath);
@@ -216,7 +217,8 @@ namespace CareCompass
             {
                 dGV_CegKorhazak.Rows.Add(hospital.hospital_name, hospital.hospital_address);
             }
-            
+            AdjustDataGridViewHeight(dGV_CegKorhazak);
+
         }
 
         //Irányítószám és települések lekérdezése
@@ -328,7 +330,6 @@ namespace CareCompass
                 Tb_Telefonszam.Text = Tb_Telefonszam.Text.Remove(Tb_Telefonszam.Text.Length - 1);
             }
         }
-
 
         //Módosítás gomb (event)
         #region Adatok módosítása
@@ -456,7 +457,6 @@ namespace CareCompass
 
         #endregion
 
-
         //inputok ellenőrzése
         #region inputok ellenőrzése
 
@@ -570,7 +570,6 @@ namespace CareCompass
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     string image = ConvertImageToBase64(openFileDialog.FileName);
-                    MessageBox.Show("Base64 kód:\n" + image.Substring(0, 50) + "...", "Sikeres konvertálás");
                     int company_id = GlobalData.CompanyId;
                     int old_image_id = Image_id;
                     string image_title = Image_title;
@@ -633,6 +632,12 @@ namespace CareCompass
                 MessageBox.Show("Kérlek csak számokat írjon!");
                 Tb_Iranyitoszam.Text = Tb_Iranyitoszam.Text.Remove(Tb_Iranyitoszam.Text.Length - 1);
             }
+        }
+
+        //DataGridView adatfeltöltés utáni átméretezése
+        private void dGV_CegKorhazak_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            AdjustDataGridViewHeight(dGV_CegKorhazak);
         }
     }
 }

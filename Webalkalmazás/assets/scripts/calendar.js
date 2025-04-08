@@ -86,7 +86,7 @@ function renderCalendar(month, year) {
     }
 }
 
-renderCalendar(2, 2025);
+renderCalendar(currentMonth, currentYear);
 
 
 // előző hónap

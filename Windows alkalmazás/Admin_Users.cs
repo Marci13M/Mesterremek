@@ -104,7 +104,6 @@ namespace CareCompass
             tLP_Felhasznalok.Size = new Size(this.Width - 2 * 20, this.Height - 70);
         }
 
-      
         #region DataGridView-ek feltöltése és comboboxok feltöltése
         //Orvosok lekérdezése
         private async void GetDoctors()
@@ -133,7 +132,6 @@ namespace CareCompass
                 var loginButton = dGV_Orvos.Rows[rowIndex].Cells[dGV_Orvos.Columns.Count - 2];
                 if (doctor.name != null)
                 {
-                    Debug.WriteLine("jani");
                     loginButton.Value = "Belépés"; // Csak akkor állítjuk be, ha nem "Cég"
                 }
                 else
@@ -388,27 +386,26 @@ namespace CareCompass
             mainForm.Activated += (s, args) =>
             {
                 Debug.WriteLine("Main form aktív, RoleIdentifier = doctor");
-                Bejelentkezés.GlobalData.RoleIdentifier = "doctor";
-                Bejelentkezés.GlobalData.UserName = doctorName;
-                Bejelentkezés.GlobalData.UserId = doctorID;
+                GlobalData.RoleIdentifier = "doctor";
+                GlobalData.UserName = doctorName;
+                GlobalData.UserId = doctorID;
             };
 
             // Figyeljük, mikor veszti el a fókuszt a Main form
             mainForm.Deactivate += (s, args) =>
             {
                 Debug.WriteLine("Main form elvesztette a fókuszt, RoleIdentifier = admin");
-                Bejelentkezés.GlobalData.RoleIdentifier = "admin";
-                Bejelentkezés.GlobalData.UserName = username;
-                Bejelentkezés.GlobalData.UserId = userid;
+                GlobalData.RoleIdentifier = "admin";
+                GlobalData.UserName = username;
+                GlobalData.UserId = userid;
 
             };
             // Amikor a Main form bezárul Form1 bezárul
             mainForm.FormClosed += (s, args) =>
             {
-                Bejelentkezés.GlobalData.RoleIdentifier = "admin"; // Visszaállítás
-                Bejelentkezés.GlobalData.UserName = username;
-                Bejelentkezés.GlobalData.UserId = userid;
-                this.Close();
+                GlobalData.RoleIdentifier = "admin"; // Visszaállítás
+                GlobalData.UserName = username;
+                GlobalData.UserId = userid;
             };
         }
 

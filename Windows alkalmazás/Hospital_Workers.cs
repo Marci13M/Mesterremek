@@ -115,6 +115,7 @@ namespace CareCompass
                 {
                     string projectDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
                     // Kép teljes elérési útja a projekt mappájában
+                    Debug.WriteLine("Nincs kép megadva, helyettesítő kép használata.");
                     string replacementImagePath = Path.Combine(projectDirectory, "Images", "Replacement", "doctor_placeholder.png");
 
                     if (File.Exists(replacementImagePath))

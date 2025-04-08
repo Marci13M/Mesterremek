@@ -494,6 +494,7 @@ namespace CareCompass
                         else
                         {
                             button.BackColor = CurrentTheme == "Light" ? Color.Transparent : Color.Transparent;
+
                         }
                     }
                     button.ForeColor= CurrentTheme =="Light" ? Color.Black : Color.White;

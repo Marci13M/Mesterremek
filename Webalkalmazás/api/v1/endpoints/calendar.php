@@ -278,7 +278,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
                     if(strtotime($start) > strtotime("now")){
                         // szabadság ellenőrzése rögzített munkanapokat tekintve
                         $stmt = $conn->prepare("SELECT `worktimes`.`date` FROM `worktimes` WHERE (`worktimes`.`date` BETWEEN ? AND ?) AND `worktimes`.`doctor_id` = ? AND `worktimes`.`deleted` = ?");
-                        $stmt->execute([$start, $sqlEnd, $user_id, false]);
+                        $stmt->execute([$start, $end, $user_id, false]);
 
                         $worktimes = $stmt->fetch(PDO::FETCH_ASSOC);
                         if(!$worktimes){
