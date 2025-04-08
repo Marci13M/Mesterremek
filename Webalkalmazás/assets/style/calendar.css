@@ -1,0 +1,338 @@
+* {
+    color: var(--font-color-light);
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    max-height: 100vh;
+    max-width: 100vw;
+    background: linear-gradient(to top, #000000, var(--secondary-color));
+    overflow: hidden;
+    --section-height: 120px;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.person-details-container {
+    margin: 10px;
+    height: var(--section-height);
+    width: 100%;
+}
+
+.logo-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container>img {
+    max-width: 80%;
+    max-height: calc(var(--section-height) - 20px);
+}
+
+.person-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    height: 100%;
+}
+
+.person-image-container {
+    width: auto;
+    max-height: 120px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.person-image-container>img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.calendar-section {
+    margin-top: 20px;
+    --calendar-section-height: calc(100vh - var(--section-height) - 40px);
+    height: var(--calendar-section-height);
+}
+
+.calendar-options-container,
+.main-calendar-container {
+    height: 100%;
+    width: 100%;
+}
+
+.main-calendar-container {
+    padding-bottom: 20px;
+    display: grid;
+}
+
+
+/* Naptár */
+
+.calendar {
+    width: 100%;
+    border: 2px solid var(--dark-grey-color);
+    border-radius: 10px;
+    background-color: var(--background-color);
+    box-shadow: 0 0 8px var(--drop-shadow-color);
+    overflow: hidden;
+    user-select: none;
+    height: fit-content;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.calendar-header button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    margin: -10px 0;
+}
+
+.calendar-header button:hover,
+.calendar-header button:focus {
+    color: var(--primary-color);
+}
+
+#month-year {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--font-color-dark);
+}
+
+.calendar-weekdays,
+.calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 100%;
+}
+
+.calendar-weekdays div,
+.calendar-dates div {
+    text-align: center;
+    padding: 10px 3px;
+}
+
+.calendar-weekdays {
+    background-color: transparent;
+}
+
+.calendar-weekdays div {
+    font-weight: bold;
+    color: var(--font-color-dark);
+}
+
+.calendar-dates div {
+    border-bottom: 1px solid #eaeef3;
+}
+
+.calendar-dates div:not(.blank):not(.inactive) {
+    cursor: pointer;
+    transition: all 150ms ease;
+    color: var(--font-color-dark);
+}
+
+.calendar-dates div:not(.blank):not(.inactive):hover,
+.calendar-dates div:not(.blank):not(.inactive):focus {
+    background-color: var(--secondary-color);
+    color: var(--font-color-light);
+    border-radius: 5px;
+}
+
+.current-date {
+    color: var(--primary-color) !important;
+}
+
+.selected-date {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: -2px;
+    border-radius: 5px;
+}
+
+.inactive {
+    background-color: #e8e8e8;
+}
+
+
+/* Orvos által végzett szolgáltatások */
+
+.calendar-services {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: calc(var(--calendar-section-height) - 370px);
+    overflow: auto;
+}
+
+.calendar-service {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 10px;
+    width: 100%;
+    background-color: var(--background-color);
+    border-radius: 10px;
+}
+
+.calendar-service .service-color {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.calendar-service .service-name {
+    color: var(--font-color-dark);
+    margin: 0 10px;
+}
+
+.calendar-service .service-add {
+    height: 30px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+
+/* Calendar with events */
+
+.main-calendar-header {
+    display: grid;
+    grid-template-columns: 50px repeat(7, 1fr);
+    width: 100%;
+}
+
+.day-header {
+    text-align: center;
+}
+
+.main-calendar-body {
+    --hour-height: 75px;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    margin-top: 30px;
+    height: calc(var(--calendar-section-height) - 80px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.calendar-hours {
+    display: grid;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.calendar-hours p {
+    height: var(--hour-height);
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+.calendar-days-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 100%;
+}
+
+.calendar-day {
+    position: relative;
+}
+
+.calendar-day:not(:last-of-type) {
+    border-right: 1px solid var(--dark-grey-color);
+}
+
+.calendar-day .line-container {
+    height: var(--hour-height);
+    display: flex;
+    align-items: center;
+}
+
+.calendar-day .line {
+    box-sizing: unset;
+    width: 100%;
+    height: 1px;
+    background-color: var(--dark-grey-color);
+}
+
+.calendar-day .service {
+    position: absolute;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 5px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.calendar-day .service.outline {
+    outline: 3px solid var(--red-color);
+}
+
+.calendar-day .event {
+    position: absolute;
+    width: 100%;
+    background-color: #ffffff3b;
+    box-shadow: 0 4px 30px #0000001a;
+    border: 1px solid #ffffff4d;
+    border-radius: 8px;
+    padding: 5px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.calendar-day .event.fulfilled {
+    text-decoration: line-through;
+}
+
+.calendar-day .holiday {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fefefe00;
+    opacity: 0.8;
+    background-size: 40px 40px;
+    background-image: repeating-linear-gradient(45deg, #c7c7c7 0, #c7c7c7 4px, #fefefe00 0, #fefefe00 50%);
+    z-index: 3;
+    cursor: pointer;
+}
+
+.calendar-day .event .title {
+    font-size: 0.9rem;
+}
+
+.calendar-day .event .description {
+    font-size: 0.8rem;
+}
+
+select.input-like {
+    max-width: 200px;
+    background-color: transparent;
+    outline: 2px solid var(--dark-grey-color);
+    font-size: 1rem;
+}
+
+.show-details {
+    margin-top: 20px;
+    row-gap: 20px;
+}
+
+.show-details>div>p:not(:first-of-type) {
+    margin-top: 5px;
+}

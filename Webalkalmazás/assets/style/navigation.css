@@ -1,0 +1,231 @@
+/* A navigáció reszponzív CSS kódja */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--nav-height);
+    padding: 0 40px;
+    background-color: var(--secondary-color);
+    color: var(--font-color-light);
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.hamburger-icon {
+    display: none;
+}
+
+.nav-list-items {
+    display: flex;
+    flex-direction: row;
+    height: var(--nav-height);
+    /* gap: 40px; */
+    list-style-type: none;
+}
+
+.nav-list-item {
+    position: relative;
+    height: 100%;
+    width: fit-content;
+}
+
+.nav-link {
+    color: var(--font-color-light);
+    text-decoration: none;
+    display: block;
+    padding: 20px 30px;
+    transition: all 200ms ease;
+    height: var(--nav-height);
+}
+
+.nav-logo {
+    height: 56px;
+    padding: 5px 0;
+}
+
+.user-action .user-login {
+    height: var(--nav-height);
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+    padding: 20px 30px;
+}
+
+.user-login img {
+    height: 30px;
+    width: auto;
+}
+
+.user-login p {
+    color: var(--font-color-light);
+}
+
+.logout {
+    color: var(--red-color);
+}
+
+
+/* lenyíló menü */
+
+.nav-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: fit-content;
+    background-color: var(--secondary-color);
+    column-gap: 20px;
+    z-index: 1000;
+}
+
+.nav-dropdown>.nav-list-items {
+    height: unset;
+}
+
+.nav-dropdown>.nav-list-items>.nav-list-item {
+    width: 100%;
+}
+
+.padding-small>.nav-link {
+    padding: 10px 20px;
+    height: unset;
+    white-space: nowrap;
+}
+
+
+/* felhívó üzenet */
+
+.headline-info-container {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    background-color: var(--yellow-color);
+    color: var(--font-color-dark);
+    padding: 10px 0;
+    z-index: 900;
+}
+
+.headline-info {
+    margin: 0 auto;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.headline-info button {
+    border: none;
+    background-color: transparent;
+    text-decoration: underline;
+    outline: none;
+}
+
+.headline-info button:hover,
+.headline-info button:focus {
+    background-color: transparent;
+}
+
+
+/* Egér elem felé vitele */
+
+@media (min-width: 800px) {
+    .nav-link:hover,
+    .user-login:hover {
+        background-color: var(--primary-color);
+    }
+    .nav-link:hover+.nav-dropdown,
+    .nav-dropdown:hover {
+        display: block;
+        animation: opendropdown 200ms;
+    }
+}
+
+
+/* Animációk */
+
+@keyframes opendropdown {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* navigáció reszponzivitása */
+
+@media (max-width: 800px) {
+    nav {
+        padding: 0;
+    }
+    .nav-container {
+        flex-direction: column;
+        justify-content: unset;
+        height: fit-content;
+    }
+    .nav-container[data-open="true"] {
+        height: 100vh;
+    }
+    .hamburger-icon {
+        display: block;
+        height: 50px;
+    }
+    .nav-elements-container {
+        width: 100%;
+        background-color: var(--secondary-color);
+    }
+    .nav-elements-container.icon-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+    .nav-elements-container.menu-options {
+        padding-top: 20px;
+        overflow-y: scroll;
+        flex: 1;
+        border-bottom: 2px solid var(--font-color-light);
+        display: none;
+    }
+    .nav-elements-container.user-action {
+        justify-content: center;
+        display: none;
+    }
+    .nav-elements-container.user-action .nav-list-item {
+        text-align: center;
+    }
+    .nav-list-items {
+        flex-direction: column;
+    }
+    .nav-list-item {
+        width: 100%;
+        height: fit-content;
+        display: block;
+    }
+    .nav-dropdown {
+        display: none;
+        position: unset;
+        margin-left: 20px;
+    }
+    .user-action .user-login {
+        justify-content: center;
+    }
+    .relative-position>.nav-dropdown {
+        margin-left: 0;
+    }
+}

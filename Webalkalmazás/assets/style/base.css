@@ -1,0 +1,340 @@
+/* A CSS alapbeállítások meghatározása és azonos elemek formázása */
+
+
+/* Betűtípusok importálása */
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Lexend:wght@100..900&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Alap betűtípus beállítása */
+    font-family: "Lexend", sans-serif;
+    font-weight: 300;
+    color: var(--font-color-dark);
+    /* Színek meghatározása */
+    --primary-color: #3fccbc;
+    --secondary-color: #1f395c;
+    --background-color: #e9e9e9;
+    --font-color-dark: #1f1f1f;
+    --font-color-light: #ffffff;
+    --drop-shadow-color: #00000025;
+    --dark-grey-color: #616161;
+    --red-color: #de2020;
+    --green-color: #1acf1a;
+    --yellow-color: #ffc400;
+    /* egyéb változók */
+    --border-radius: 5px;
+    --nav-height: 60px;
+    --footer-height: 250px;
+}
+
+.bold {
+    font-weight: bold !important;
+}
+
+main {
+    margin-top: 60px;
+    min-height: calc(100vh - var(--nav-height) - var(--footer-height));
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 600;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 300;
+    align-self: center;
+}
+
+a.btn {
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    outline: 2px solid var(--secondary-color);
+    color: var(--font-color-dark);
+    text-align: center;
+    transition: all 150ms ease;
+}
+
+a.btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--font-color-light);
+}
+
+.grid-column-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-column-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-column-1 {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.grid-span-2 {
+    grid-column: span 2;
+}
+
+.grid-column-1,
+.grid-column-2,
+.grid-column-3 {
+    display: grid !important;
+    grid-auto-rows: auto;
+    column-gap: 40px;
+}
+
+.max-content {
+    max-width: 1270px;
+    margin: auto;
+    display: block;
+}
+
+.title-bottom-margin {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: transparent;
+    color: var(--font-color-dark);
+    outline: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 1rem;
+    transition: all 150ms ease;
+}
+
+button>span {
+    color: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+    color: var(--font-color-light);
+}
+
+button.btn-fill {
+    background-color: var(--primary-color) !important;
+    color: var(--font-color-light) !important;
+}
+
+button.btn-fill:hover {
+    background-color: transparent !important;
+    color: var(--font-color-dark) !important;
+}
+
+button.no-focus {
+    background-color: var(--background-color);
+    outline: unset;
+}
+
+button.no-focus:hover {
+    color: var(--font-color-dark);
+}
+
+button.delete {
+    background-color: transparent;
+    color: var(--font-color-dark);
+    outline: 2px solid var(--red-color);
+}
+
+button.delete:hover {
+    background-color: var(--red-color);
+    color: var(--font-color-light);
+}
+
+hr {
+    border: 2px solid var(--drop-shadow-color);
+    border-radius: var(--border-radius);
+    margin: 20px 0;
+}
+
+input.error {
+    outline-color: var(--red-color) !important;
+}
+
+select {
+    background-color: var(--background-color);
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    outline: none;
+    width: 100%;
+    width: fit-content;
+}
+
+select.error {
+    outline: 2px solid var(--red-color);
+}
+
+select.fill {
+    width: 100%;
+}
+
+.relative-position {
+    position: relative;
+}
+
+.width-100 {
+    width: 100% !important;
+}
+
+@media (max-width: 1270px) {
+    .max-content {
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-column-2,
+    .grid-column-3 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .grid-span-2 {
+        grid-column: span 1;
+    }
+}
+
+
+/* Töltés jelző */
+
+span.hidden {
+    display: none;
+}
+
+.dot-spinner {
+    --uib-size: 1.1rem;
+    --uib-speed: .9s;
+    --uib-color: var(--font-color-dark);
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: var(--uib-size);
+    width: var(--uib-size);
+}
+
+.dot-spinner.light {
+    --uib-color: var(--font-color-light);
+}
+
+.dot-spinner.hidden {
+    display: none;
+}
+
+.dot-spinner__dot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+}
+
+.dot-spinner__dot::before {
+    content: '';
+    height: 20%;
+    width: 20%;
+    border-radius: 50%;
+    background-color: var(--uib-color);
+    transform: scale(0);
+    opacity: 0.5;
+    animation: pulse0112 calc(var(--uib-speed) * 1.111) ease-in-out infinite;
+    box-shadow: 0 0 20px rgba(18, 31, 53, 0.3);
+}
+
+.dot-spinner__dot:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.dot-spinner__dot:nth-child(2)::before {
+    animation-delay: calc(var(--uib-speed) * -0.875);
+}
+
+.dot-spinner__dot:nth-child(3) {
+    transform: rotate(90deg);
+}
+
+.dot-spinner__dot:nth-child(3)::before {
+    animation-delay: calc(var(--uib-speed) * -0.75);
+}
+
+.dot-spinner__dot:nth-child(4) {
+    transform: rotate(135deg);
+}
+
+.dot-spinner__dot:nth-child(4)::before {
+    animation-delay: calc(var(--uib-speed) * -0.625);
+}
+
+.dot-spinner__dot:nth-child(5) {
+    transform: rotate(180deg);
+}
+
+.dot-spinner__dot:nth-child(5)::before {
+    animation-delay: calc(var(--uib-speed) * -0.5);
+}
+
+.dot-spinner__dot:nth-child(6) {
+    transform: rotate(225deg);
+}
+
+.dot-spinner__dot:nth-child(6)::before {
+    animation-delay: calc(var(--uib-speed) * -0.375);
+}
+
+.dot-spinner__dot:nth-child(7) {
+    transform: rotate(270deg);
+}
+
+.dot-spinner__dot:nth-child(7)::before {
+    animation-delay: calc(var(--uib-speed) * -0.25);
+}
+
+.dot-spinner__dot:nth-child(8) {
+    transform: rotate(315deg);
+}
+
+.dot-spinner__dot:nth-child(8)::before {
+    animation-delay: calc(var(--uib-speed) * -0.125);
+}
+
+@keyframes pulse0112 {
+    0%,
+    100% {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.hidden {
+    display: none !important;
+}

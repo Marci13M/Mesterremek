@@ -1,0 +1,21 @@
+RewriteEngine On
+RewriteCond %{HTTP:Authorization} ^(.*)
+RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
+
+# Közvetlen hozzáférés tiltása minden PHP fájlhoz
+<FilesMatch "\.php$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+
+# Csak az api.php fájl elérhető kívülről
+<Files "api.php">
+    Allow from all
+</Files>
+
+# Minden v1 API kérést az api.php fájlhoz irányítunk, az api.php fájl megadása nélkül
+RewriteRule ^api/v1/api/(.*)$ api.php?resource=$1 [L,QSA]
+
+# Minden v1 API kérést az api.php fájlhoz irányítunk
+# RewriteRule ^api/v1/(.*)$ api.php [L,QSA]

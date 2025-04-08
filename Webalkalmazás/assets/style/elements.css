@@ -1,0 +1,1421 @@
+/* Szűrő sáv */
+
+.filter-section {
+    background-color: var(--font-color-light);
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.filter-section-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--font-color-dark);
+    padding: 10px 0;
+}
+
+
+/* Szűrő */
+
+.filter-container {
+    cursor: pointer;
+    position: relative;
+}
+
+.filter-container.active>div>p {
+    color: var(--primary-color);
+}
+
+.filter-container>div>p {
+    font-size: 1.1rem;
+    padding: 5px 10px 5px 0;
+}
+
+
+/* Szűrő felugró ablak */
+
+.filters {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    background-color: var(--font-color-light);
+    color: var(--font-color-dark);
+    z-index: 5;
+    filter: drop-shadow(0 0 8px var(--drop-shadow-color));
+    border-radius: var(--border-radius);
+}
+
+.filters .filter {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    gap: 10px;
+    align-items: center;
+}
+
+.filters .filter select {
+    max-width: 250px;
+}
+
+#filter-indicator {
+    margin: -10px auto 20px;
+}
+
+
+/* Kereső */
+
+.filter-container>div:not(.filters),
+.search-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: fit-content;
+    border-radius: var(--border-radius);
+}
+
+.search-container>img {
+    cursor: pointer;
+}
+
+
+/* Kereső, szűrő mező */
+
+.filter-container>div>img,
+.search-container>img {
+    height: 30px;
+}
+
+.search-container:has(input:focus) {
+    outline: 2px solid var(--secondary-color);
+}
+
+.search-container>input {
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    border-radius: var(--border-radius);
+    border: none;
+    outline: none !important;
+}
+
+.search-container>input:focus {
+    outline: none
+}
+
+.search-container>input::placeholder,
+.filter-container>p {
+    font-weight: 200;
+}
+
+.search-container>input:focus::placeholder,
+.search-container>input:focus {
+    text-align: left;
+}
+
+.search-container>input::placeholder,
+.search-container>input {
+    text-align: right;
+}
+
+
+/* Kártyák közös elemei */
+
+.cards-container {
+    display: grid;
+    gap: 20px;
+}
+
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.card-padding {
+    padding: 20px;
+}
+
+.card-no-gap {
+    gap: 0 !important;
+}
+
+.card-image-circle {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.card-image {
+    height: 140px;
+    width: 200px;
+    overflow: hidden;
+}
+
+.card-image-circle>img,
+.card-image>img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-details>.main {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+/* Közepes méretű kártya */
+
+.medium-card-container {
+    background-color: var(--font-color-light);
+    filter: drop-shadow(0 0 8px var(--drop-shadow-color));
+    border-radius: 10px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: min-content auto;
+    overflow: hidden;
+}
+
+
+/* Kisméretű kártya */
+
+.small-card-container {
+    background-color: var(--font-color-light);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    filter: drop-shadow(0 0 8px var(--drop-shadow-color));
+    overflow: hidden;
+}
+
+
+/* Vertikális kártya */
+
+.vertical-card-container {
+    background-color: var(--font-color-light);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 20px;
+    gap: 20px;
+    filter: drop-shadow(0 0 8px var(--drop-shadow-color));
+    width: 100%;
+    overflow: hidden;
+}
+
+.vertical-card-container>.main {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.vertical-card-container>.main>p:first-of-type {
+    font-weight: 400;
+}
+
+.vertical-card-container>.cta {
+    margin: auto;
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    color: var(--font-color-light);
+    font-weight: 400;
+    outline-offset: -2px;
+    outline: 2px solid var(--primary-color);
+    cursor: pointer;
+    transition: all 150ms ease;
+}
+
+.vertical-card-container>.cta:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+
+/* Oldal címe */
+
+.page-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.page-title.white {
+    background-color: var(--font-color-light);
+}
+
+
+/* Szekció tároló elem */
+
+.section-container {
+    margin: 60px auto;
+}
+
+.section-container>h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* Szöveges részek stílusa */
+
+.text-section {
+    margin: 40px auto;
+}
+
+.text-section>h2 {
+    margin-bottom: 20px;
+}
+
+.text-section>p {
+    line-height: 130%;
+}
+
+.text-section>p:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+
+/* Figura stílusa */
+
+.figures-container {
+    width: 100%;
+    display: grid;
+    gap: 20px;
+}
+
+figure {
+    width: 100%;
+}
+
+figure>img {
+    width: 100%;
+}
+
+figure>figcaption {
+    width: fit-content;
+    margin: 10px auto 0;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+
+/* Űrlap elemek */
+
+input:not([type="checkbox"]):not([type="radio"]),
+textarea {
+    margin: 8px 0;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    border: none;
+    outline: 2px solid var(--dark-grey-color);
+    background-color: transparent;
+    transition: all 150ms ease;
+    font-size: 1rem;
+}
+
+.element-with-label:has(input[type="checkbox"]) {
+    display: grid;
+    grid-template-columns: 1em auto;
+    justify-content: start;
+    gap: 0.5em;
+}
+
+textarea {
+    height: 150px;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):focus,
+textarea:focus {
+    outline-color: var(--primary-color);
+}
+
+
+/* Kapcsolati űrlap */
+
+.contact-form-container {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-form-container>h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    gap: 20px;
+}
+
+
+/* Form grid */
+
+.form-flow-column>div {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Elérhetőségi adatok */
+
+.company-data-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 20px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.company-data-list>div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.company-data-list>div.company-phonenumbers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0 0;
+}
+
+
+/* Rendszerüzenet */
+
+.msg-container {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: fit-content;
+    display: none;
+    z-index: 10000;
+}
+
+.msg-container .msg {
+    padding: 5px 20px;
+    filter: drop-shadow(0 0 8px var(--drop-shadow-color));
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.msg>* {
+    color: inherit;
+}
+
+.msg.error {
+    background-color: var(--red-color);
+    color: var(--font-color-light);
+}
+
+.msg.success {
+    background-color: var(--green-color);
+    color: var(--font-color-light);
+}
+
+.msg.warning {
+    background-color: var(--yellow-color);
+    color: var(--font-color-dark);
+}
+
+
+/* Felugró ablak */
+
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100dvh;
+    width: 100dvw;
+    display: none;
+    background-color: var(--drop-shadow-color);
+    overflow: auto;
+    z-index: 100;
+}
+
+.popup {
+    background-color: var(--font-color-light);
+    color: var(--font-color-dark);
+    border-radius: var(--border-radius);
+    width: fit-content;
+    margin: 100px auto 0;
+    padding: 40px;
+}
+
+.popup * {
+    color: inherit;
+}
+
+.popup>h2 {
+    text-align: center;
+}
+
+.named-data-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.named-data-container>h3 {
+    margin-bottom: 10px;
+}
+
+.named-data-container>div>* {
+    display: inline-block;
+}
+
+.popup-buttons {
+    margin: 40px 0 0 auto;
+    width: fit-content;
+}
+
+.popup-buttons.equal {
+    margin: 40px auto 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup-buttons>button:not(:first-of-type) {
+    margin-left: 20px;
+}
+
+.current-setting {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.current-setting .current-color {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+}
+
+.colors-container {
+    margin: 20px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.colors-container .color {
+    height: 50px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    transition: all 150ms ease;
+    cursor: pointer;
+}
+
+.colors-container .color:hover,
+.colors-container .color.selected {
+    outline: 2px solid #000000;
+}
+
+
+/* Felhasználói profil */
+
+.user-data-section {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 20px;
+    margin: 100px auto 50px;
+}
+
+.user-data-list,
+.reservations-section {
+    background-color: var(--font-color-light);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.user-data-list {
+    height: fit-content;
+}
+
+button.text-like {
+    outline: unset;
+    padding: 0;
+    color: var(--primary-color);
+}
+
+button.text-like:hover {
+    background-color: unset;
+}
+
+.user-data-list>div.grid-2 {
+    display: grid;
+    gap: 20px;
+}
+
+.user-data-list>.buttons-container {
+    margin: 20px 0 0 auto;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+
+/* Profil szerkesztés popup */
+
+.edit-profile {
+    margin-top: 20px;
+    column-gap: 20px !important;
+}
+
+
+/* Fogalások a felhasználói profilban */
+
+.reservations-section {
+    width: 100%;
+}
+
+.reservations-section>div.grid-2 {
+    display: grid;
+    gap: 40px;
+}
+
+.reservations-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.reservation {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    height: fit-content;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--background-color);
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.reservation>*:nth-child(2) {
+    justify-self: center;
+}
+
+.reservation>*:nth-child(3) {
+    justify-self: end;
+}
+
+.reservation>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+
+/* Lefoglalt időpont részletező oldal */
+
+.reservation-details-container {
+    background-color: var(--font-color-light);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    margin: 100px auto 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.reservation-details-container>h2 {
+    margin-bottom: 20px;
+}
+
+.reservation-details-container>div.grid-4 {
+    display: grid;
+    gap: 20px;
+}
+
+.reservation-details-container>.buttons-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+/* Orvos bemutatkozó oldala */
+
+.doctor-data-container {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 20px;
+    margin: 100px auto 50px;
+}
+
+.doctor-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.doctor-profile>.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.doctor-profile>.details>img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.doctor-profile>.details>div>ul {
+    list-style-type: none;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.doctor-description {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.doctor-description>div:not(.not-flex) {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.doctor-description>div.not-flex>h2 {
+    margin-bottom: 20px;
+}
+
+.doctor-description>div>ul {
+    margin-left: 40px;
+}
+
+
+/* Képes oldalcím */
+
+.image-title-section {
+    width: 100%;
+    position: relative;
+    height: 350px;
+    max-width: 1290px;
+    margin: 0 auto;
+}
+
+.image-title-section>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-title-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    background-color: var(--drop-shadow-color);
+}
+
+.image-title-section>h1 {
+    position: absolute;
+    z-index: 2;
+    bottom: 20px;
+    left: 20px;
+    max-width: calc(100% - 120px);
+    color: var(--font-color-light);
+}
+
+.image-title-section>img.logo {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    right: 20px;
+    color: var(--font-color-light);
+    height: 80px;
+    width: 80px;
+}
+
+
+/* Kórház */
+
+.hospital-description {
+    margin-bottom: 40px;
+}
+
+
+/* tab control */
+
+.tab-control>.controls {
+    display: flex;
+    gap: 40px;
+    justify-content: unset !important;
+    border-bottom: 2px solid var(--drop-shadow-color);
+    margin-bottom: 20px;
+}
+
+.tab-control>.controls>button {
+    outline: none;
+    border-radius: 0;
+    margin-bottom: -2px;
+}
+
+.tab-control>.controls>button:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.tab-active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+
+/* Képes oldalcím */
+
+.page-title-image {
+    margin: 100px auto 40px;
+    display: grid;
+    gap: 40px;
+}
+
+.page-title-image>.image-container {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
+.page-title-image>.image-container>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page-title-image>.page-description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/* orvos szolgáltatása */
+
+.service-reservations-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.service-reservation-container {
+    background-color: var(--font-color-light);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 370px;
+}
+
+.service-reservation-container>.doctor-data-container {
+    margin: unset;
+    border-right: 2px solid var(--drop-shadow-color);
+}
+
+.service-reservation-container>.doctor-data-container>.doctor-profile>.details>img {
+    width: 140px !important;
+    height: 140px !important;
+}
+
+.service-reservation-container>.doctor-data-container>.service-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/* orvos elérhető időpont naptár */
+
+.calendar-container>h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.calendar-container>.day-controls {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    font-size: 0.8rem;
+    text-align: center;
+    align-items: center;
+}
+
+.calendar-container>.day-controls>img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.calendar-container>.day-controls>img.disabled {
+    cursor: not-allowed;
+}
+
+.calendar-container>.day-controls>.days-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.calendar-container>.day-times {
+    width: 80%;
+    margin: 10px auto 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.calendar-container>.day-times>.day {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    align-items: center;
+}
+
+.calendar-container>.day-times>.day>.day-time:not(:has(.datetime)) {
+    width: 90%;
+    margin: 13px auto;
+    height: 4px;
+    background-color: var(--dark-grey-color);
+    border-radius: var(--border-radius);
+}
+
+.calendar-container>.day-times>.day>.day-time>.datetime {
+    width: 90%;
+    margin: 0 auto;
+    padding: 5px 0;
+    background-color: var(--secondary-color);
+    color: var(--font-color-light);
+    text-align: center;
+    border-radius: var(--border-radius);
+    outline: 2px solid var(--secondary-color);
+    outline-offset: -2px;
+    cursor: pointer;
+    transition: all 150ms ease;
+}
+
+.calendar-container>.day-times>.day>.day-time>.datetime:hover,
+.calendar-container>.day-times>.day>.day-time>.datetime:focus {
+    background-color: transparent;
+    color: var(--font-color-dark);
+}
+
+.calendar-container>.other-options {
+    width: fit-content;
+    margin: 20px auto 0;
+    font-size: 1.1rem;
+}
+
+
+/* Naptár stílusa */
+
+.calendar {
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    border-radius: 10px;
+    /* background-color: var(--background-color); */
+    box-shadow: 0 0 8px var(--drop-shadow-color);
+    overflow: hidden;
+    user-select: none;
+    height: fit-content;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.calendar-header button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    margin: -10px 0;
+}
+
+.calendar-header button:hover,
+.calendar-header button:focus {
+    color: var(--primary-color);
+}
+
+#month-year {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.calendar-weekdays,
+.calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 100%;
+}
+
+.calendar-weekdays div,
+.calendar-dates div {
+    text-align: center;
+    padding: 10px 3px;
+}
+
+.calendar-weekdays {
+    background-color: var(--secondary-color);
+}
+
+.calendar-weekdays div {
+    font-weight: bold;
+    color: var(--font-color-light);
+}
+
+.calendar-dates div {
+    border-bottom: 1px solid #eaeef3;
+}
+
+.calendar-dates div:not(.blank):not(.inactive) {
+    cursor: pointer;
+    transition: all 150ms ease;
+}
+
+.calendar-dates div:not(.blank):not(.inactive):hover,
+.calendar-dates div:not(.blank):not(.inactive):focus {
+    background-color: var(--secondary-color);
+    color: var(--font-color-light);
+    border-radius: 5px;
+}
+
+.current-date {
+    color: var(--primary-color);
+}
+
+.selected-date {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: -2px;
+    border-radius: 5px;
+}
+
+.inactive {
+    background-color: #e8e8e8;
+}
+
+
+/* Szabad időpontok a napra*/
+
+.free-times-container:has(.free-time) {
+    display: grid;
+    width: fit-content;
+    grid-template-rows: repeat(8, 1fr);
+    gap: 10px;
+    grid-auto-flow: column;
+    grid-auto-columns: auto;
+}
+
+.free-times-container:has(.no-free-time) {
+    margin-top: 20px;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.free-times-container .free-time {
+    width: 80px;
+    outline-color: var(--secondary-color);
+    padding: 10px 15px;
+}
+
+.free-times-container .free-time:hover,
+.free-times-container .free-time:focus {
+    background-color: var(--secondary-color);
+    color: var(--font-color-light);
+}
+
+.free-times-section {
+    gap: 20px;
+}
+
+
+/* Reszponzivitás */
+
+@media (max-width: 1200px) {
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* Felhasználói profil */
+    .user-data-section {
+        margin: 100px 20px 50px;
+    }
+    /* Lefoglalt időpont részletező oldal */
+    .reservation-details-container {
+        margin: 100px 10px 50px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* Fogalások a felhasználói profilban */
+    .reservation {
+        grid-template-areas: "a b" "c c";
+        grid-template-columns: unset;
+    }
+    .reservation>*:nth-child(1) {
+        grid-area: a;
+    }
+    .reservation>*:nth-child(2) {
+        grid-area: b;
+        justify-self: end;
+    }
+    .reservation>*:nth-child(3) {
+        margin-top: 20px;
+        grid-area: c;
+        justify-self: center;
+    }
+    /* Orvos bemutatkozó oldala */
+    .doctor-data-container {
+        grid-template-columns: 1fr;
+    }
+    .doctor-profile {
+        align-items: start;
+        width: fit-content;
+        gap: 20px;
+    }
+    .doctor-profile>.details {
+        flex-direction: row;
+        align-items: start;
+    }
+    .doctor-profile>.details>img {
+        width: 170px;
+        height: 170px;
+    }
+    .doctor-profile>.details>div>ul {
+        align-items: start;
+    }
+    .doctor-profile>.review {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    /* orvos szolgáltatása */
+    .service-reservations-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .service-reservation-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .service-reservation-container>.doctor-data-container {
+        border-right: unset;
+        padding-bottom: 20px;
+        border-bottom: 2px solid var(--drop-shadow-color);
+    }
+    .service-reservation-container>.doctor-data-container>.doctor-profile {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+    }
+    .service-reservation-container>.doctor-data-container>.doctor-profile>.review {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 900px) {
+    /* Fogalások a felhasználói profilban */
+    .reservations-section>div.grid-2 {
+        grid-template-columns: 1fr;
+    }
+    .reservation {
+        grid-template-areas: unset;
+        grid-template-columns: 1fr;
+    }
+    .reservation>*:nth-child(1) {
+        grid-area: unset;
+    }
+    .reservation>*:nth-child(2) {
+        grid-area: unset;
+        justify-self: start;
+    }
+    .reservation>*:nth-child(3) {
+        margin-top: 20px;
+        grid-area: unset;
+        justify-self: center;
+    }
+    /* orvos szolgáltatása */
+    .service-reservations-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .service-reservation-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 450px !important;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 780px) {
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+    /* Vertikális kártya */
+    .vertical-card-container {
+        max-width: 500px;
+        justify-self: center;
+        gap: 20px;
+    }
+    /* Kisméretú kártya */
+    .small-card-container {
+        max-width: 500px;
+        justify-self: center;
+        gap: 20px;
+    }
+    /* Közepes méretű kártya */
+    .medium-card-container {
+        max-width: 500px;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        justify-self: center;
+        gap: 20px;
+    }
+    .card-image-circle {
+        margin: auto;
+    }
+    .card-image {
+        height: auto;
+        width: 100%;
+        aspect-ratio: 10/7;
+        overflow: hidden;
+    }
+    .card-details {
+        gap: 20px;
+    }
+    .card-details>.cta {
+        margin: auto;
+    }
+    /* Felugró ablak */
+    .popup-container {
+        padding: 10px;
+    }
+    .popup {
+        padding: 20px;
+        margin-top: 60px;
+        max-width: 100%;
+    }
+    .popup-buttons {
+        margin: 40px auto 0;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+    .popup-buttons button {
+        width: 100%;
+    }
+    .popup-buttons>button:not(:first-of-type) {
+        margin: 0;
+    }
+    /* Felhasználói profil */
+    .user-data-section {
+        grid-template-columns: 1fr;
+        margin: 80px 10px 50px;
+    }
+    /* Lefoglalt időpont részletező oldal */
+    .reservation-details-container {
+        margin: 80px 10px 50px;
+    }
+    .free-times-section {
+        gap: 20px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+    /* Lefoglalt időpont részletező oldal */
+    .reservation-details-container>.buttons-container {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        margin: 40px auto 0;
+    }
+    .reservation-details-container>.buttons-container>button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    /* Szűrő sáv, szűrő, keresés */
+    .filter-section-container {
+        flex-direction: column;
+        justify-content: unset;
+        row-gap: 10px;
+    }
+    .filter-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .filter-container>div:not(.filters) {
+        width: fit-content;
+        margin: auto;
+    }
+    .search-container,
+    .filter-container>div {
+        flex-direction: row-reverse;
+        width: min-content;
+    }
+    .search-container>input::placeholder,
+    .search-container>input {
+        text-align: left;
+    }
+    .filters {
+        position: unset;
+        display: block;
+        border: none;
+        border-radius: unset;
+        filter: unset;
+        width: 100%;
+    }
+    /* vertikális kártya */
+    .vertical-card-container>.cta {
+        width: 100%;
+        text-align: center;
+    }
+    /* Kisméretű kártya */
+    .small-card-container {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+    /* Oldal címe */
+    .page-title {
+        padding: 30px 0;
+    }
+    /* Elérhetőségi adatok */
+    .company-data-list {
+        padding: 0 20px;
+        width: unset;
+    }
+    .company-data-list>div {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+    }
+    /* Lefoglalt időpont részletező oldal */
+    .reservation-details-container>.buttons-container {
+        flex-direction: column;
+        width: 100% !important;
+        margin: 40px auto 0;
+    }
+    .reservation-details-container>.buttons-container>button {
+        width: 100%;
+    }
+    /* Orvos bemutatkozó oldala */
+    .doctor-profile {
+        width: 100%;
+    }
+    .doctor-profile>.details>img {
+        width: 120px;
+        height: 120px;
+    }
+    .doctor-profile>.review {
+        width: fit-content;
+        align-self: center;
+        gap: 20px;
+    }
+    /* Képes oldalcím */
+    .image-title-section {
+        height: fit-content;
+    }
+    .image-title-section>img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+    .image-title-section::after {
+        height: 0;
+    }
+    .image-title-section>h1 {
+        display: block;
+        position: unset;
+        margin: 0 10px;
+        color: var(--font-color-dark);
+    }
+    .image-title-section>img.logo {
+        display: block;
+        position: unset;
+        margin: 10px 0 0;
+    }
+    /* tab control */
+    .tab-control>.controls {
+        display: flex;
+        justify-content: space-between;
+    }
+    /* orvos szolgáltatása */
+    .calendar-container>.day-controls {
+        font-size: 0.75rem;
+    }
+    .calendar-container>.day-times>.day>.day-time>.datetime {
+        width: 100%;
+        font-size: 0.8rem;
+    }
+}

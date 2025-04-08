@@ -1,0 +1,90 @@
+/* A footer reszponzív CSS kódja */
+
+footer {
+    display: block;
+    margin-top: 50px;
+    width: 100%;
+    height: var(--footer-height);
+    padding: 40px 60px;
+    background-color: var(--secondary-color);
+    color: var(--font-color-light);
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-section-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: flex-start;
+}
+
+.footer-section-container>a,
+.footer-section-container>p,
+.footer-section-container>h3 {
+    color: var(--font-color-light) !important;
+    align-self: baseline;
+}
+
+.footer-logo-container {
+    height: 100%;
+    align-self: center
+}
+
+.footer-logo-container img {
+    height: 100px;
+    width: auto;
+}
+
+.social-media-icons-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    align-items: center;
+    height: 30px;
+}
+
+.social-media-icons-container>*,
+.social-media-icons-container>a>img {
+    height: 100%;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* navigáció reszponzivitása */
+
+@media (max-width: 1160px) {
+    footer {
+        height: fit-content;
+    }
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 40px;
+    }
+    .footer-logo-container img {
+        height: 75px;
+    }
+}
+
+@media (max-width: 650px) {
+    footer {
+        position: unset;
+        display: block;
+    }
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+    .footer-logo-container img {
+        display: block;
+        margin: auto;
+    }
+}

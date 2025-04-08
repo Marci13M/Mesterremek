@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CE584957-72FE-491B-B115-7B09E239FD7E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CareCompass</RootNamespace>
+    <AssemblyName>CareCompass</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.9.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Pipelines, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Pipelines.9.0.0\lib\net462\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encodings.Web.9.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Json.9.0.0\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Add.Designer.cs">
+      <DependentUpon>Admin_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Hospital.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Hospital.Designer.cs">
+      <DependentUpon>Admin_Hospital.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Company.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Company.Designer.cs">
+      <DependentUpon>Admin_Company.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Users.Designer.cs">
+      <DependentUpon>Admin_Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Menu.Designer.cs">
+      <DependentUpon>Admin_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Services.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Services.Designer.cs">
+      <DependentUpon>Admin_Services.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Service_Modify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Service_Modify.Designer.cs">
+      <DependentUpon>Admin_Service_Modify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Statistics.Designer.cs">
+      <DependentUpon>Admin_Statistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Web_Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Web_Users.Designer.cs">
+      <DependentUpon>Admin_Web_Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApiClient.cs" />
+    <Compile Include="Company_Hospitals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company_Hospitals.Designer.cs">
+      <DependentUpon>Company_Hospitals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company_Menu.Designer.cs">
+      <DependentUpon>Company_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company_Workers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company_Workers.Designer.cs">
+      <DependentUpon>Company_Workers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Moderator_Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Moderator_Profile.Designer.cs">
+      <DependentUpon>Moderator_Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profil.Designer.cs">
+      <DependentUpon>Profil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company_Services.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company_Services.Designer.cs">
+      <DependentUpon>Company_Services.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company_Statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company_Statistics.Designer.cs">
+      <DependentUpon>Company_Statistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company_Profil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company_Profil.Designer.cs">
+      <DependentUpon>Company_Profil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customs\CCButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Customs\CCCircularPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Customs\CCTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customs\CCTextBox.Designer.cs">
+      <DependentUpon>CCTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customs\CCToggleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Doctor_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor_Menu.Designer.cs">
+      <DependentUpon>Doctor_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor_Profil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor_Profil.Designer.cs">
+      <DependentUpon>Doctor_Profil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor_Statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor_Statistics.Designer.cs">
+      <DependentUpon>Doctor_Statistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bejelentkezés.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bejelentkezés.Designer.cs">
+      <DependentUpon>Bejelentkezés.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital_Workers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hospital_Workers.Designer.cs">
+      <DependentUpon>Hospital_Workers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hospital_Menu.Designer.cs">
+      <DependentUpon>Hospital_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital_Profil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hospital_Profil.Designer.cs">
+      <DependentUpon>Hospital_Profil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital_Services.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hospital_Services.Designer.cs">
+      <DependentUpon>Hospital_Services.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital_Statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hospital_Statistics.Designer.cs">
+      <DependentUpon>Hospital_Statistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service_Modify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service_Modify.Designer.cs">
+      <DependentUpon>Service_Modify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemeManager.cs" />
+    <Compile Include="User_Modify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Modify.Designer.cs">
+      <DependentUpon>User_Modify.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin_Add.resx">
+      <DependentUpon>Admin_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Hospital.resx">
+      <DependentUpon>Admin_Hospital.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Company.resx">
+      <DependentUpon>Admin_Company.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Users.resx">
+      <DependentUpon>Admin_Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Menu.resx">
+      <DependentUpon>Admin_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Services.resx">
+      <DependentUpon>Admin_Services.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Service_Modify.resx">
+      <DependentUpon>Admin_Service_Modify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Statistics.resx">
+      <DependentUpon>Admin_Statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Web_Users.resx">
+      <DependentUpon>Admin_Web_Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company_Hospitals.resx">
+      <DependentUpon>Company_Hospitals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company_Menu.resx">
+      <DependentUpon>Company_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company_Workers.resx">
+      <DependentUpon>Company_Workers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moderator_Profile.resx">
+      <DependentUpon>Moderator_Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profil.resx">
+      <DependentUpon>Profil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company_Services.resx">
+      <DependentUpon>Company_Services.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company_Statistics.resx">
+      <DependentUpon>Company_Statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company_Profil.resx">
+      <DependentUpon>Company_Profil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customs\CCTextBox.resx">
+      <DependentUpon>CCTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor_Menu.resx">
+      <DependentUpon>Doctor_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor_Profil.resx">
+      <DependentUpon>Doctor_Profil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor_Statistics.resx">
+      <DependentUpon>Doctor_Statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bejelentkezés.resx">
+      <DependentUpon>Bejelentkezés.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hospital_Workers.resx">
+      <DependentUpon>Hospital_Workers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hospital_Menu.resx">
+      <DependentUpon>Hospital_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hospital_Profil.resx">
+      <DependentUpon>Hospital_Profil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hospital_Services.resx">
+      <DependentUpon>Hospital_Services.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hospital_Statistics.resx">
+      <DependentUpon>Hospital_Statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service_Modify.resx">
+      <DependentUpon>Service_Modify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Modify.resx">
+      <DependentUpon>User_Modify.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\logó - fehér.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SequoiaLight_optimized_1000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Logos\mesterremek logó - iránytű - elsődleges.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Icons\Black\Admin_Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Icons\White\Admin_White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Icons\White\user-line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Icons\Black\Logout_Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Icons\Black\Company_Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Icons\Black\Services_Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Icons\Black\Doctor_Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Icons\Black\Statistics_Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Icons\Black\User_Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Icons\Black\Calendar_Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Icons\Black\Hospital_Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Icons\Black\Change_Black.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
